@@ -1,3 +1,4 @@
+/* General styling */
 body {
     font-family: Arial, sans-serif;
     color: #333;
@@ -18,18 +19,40 @@ nav a {
     color: #0073e6;
 }
 
+h1 {
+    margin-top: 0;
+}
+
+main {
+    text-align: left;
+}
+
+/* Two-column layout */
+#home-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.photo-column {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.info-column {
+    flex: 2;
+}
+
+/* Profile photo styling */
 .profile-photo {
     width: 150px;
     border-radius: 50%;
     display: block;
-    margin: 20px auto;
 }
 
-h2 {
+/* Additional section styling */
+#additional-info h2 {
     border-bottom: 2px solid #0073e6;
     padding-bottom: 5px;
-}
-
-main {
-    text-align: center;
+    margin-top: 20px;
 }
