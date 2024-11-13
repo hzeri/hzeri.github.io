@@ -30,22 +30,25 @@ main {
 /* Two-column layout */
 #home-container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;  /* Align items to the top */
     margin-bottom: 20px;
+    flex-wrap: wrap;  /* Allow wrapping for smaller screens */
 }
 
 .photo-column {
-    flex: 1;
+    flex: 0 0 150px;  /* Fix the photo column to 150px width */
     padding-right: 20px;
 }
 
 .info-column {
-    flex: 2;
+    flex: 1;
+    min-width: 0; /* Prevent overflow */
 }
 
 /* Profile photo styling */
 .profile-photo {
-    width: 150px;
+    width: 100%; /* Ensure the image fills the photo column */
+    max-width: 150px; /* Set a maximum width */
     border-radius: 50%;
     display: block;
 }
