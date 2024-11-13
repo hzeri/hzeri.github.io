@@ -6,27 +6,89 @@
     <title>Your Name - Work Experience</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>Work Experience</h1>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="work_experience.html">Work Experience</a> |
-            <a href="publications.html">Publications & Projects</a> |
-            <a href="contact.html">Contact Me</a>
-        </nav>
-    </header>
 
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">Haley Zeri</a>
+        <div class="navbar-links">
+            <a href="work_experience.html">Experience</a>
+            <a href="publications.html">Research</a>
+            <a href="awards.html">Awards</a>
+            <a href="contact.html" class="contact-button">Contact Me</a>
+        </div>
+    </nav>
+</header>
+
+<body>
     <main>
-        <section id="experience">
-            <h2>Job Title - Company Name</h2>
+        <main>
+            <section id="experience-intro">
+                <p>A brief overview of your research interests, focus areas, and any relevant background information.</p>
+            </section>
+        <section class="dropdown">
+            <button class="dropdown-button" onclick="toggleDropdown('resexp')">My research experience</button>
+            <div id="resexp" class="dropdown-content" style="display: block;">
             <p>Dates of Employment</p>
-            <ul>
-                <li>Responsibility or achievement</li>
-                <li>Another responsibility or achievement</li>
-            </ul>
+                <ul>
+                    <li>Responsibility or achievement</li>
+                    <li>Another responsibility or achievement</li>
+                </ul>
+            <p>Dates of Employment</p>
+                <ul>
+                    <li>Responsibility or achievement</li>
+                    <li>Another responsibility or achievement</li>
+                </ul>
+            <p>Dates of Employment</p>
+                <ul>
+                    <li>Responsibility or achievement</li>
+                    <li>Another responsibility or achievement</li>
+                </ul>
+            </div>
         </section>
-        <!-- Add more sections as needed -->
+
+        <section class="dropdown">
+            <button class="dropdown-button" onclick="toggleDropdown('clinicalexp')">My clinical experience</button>
+            <div id="clinicalexp" class="dropdown-content" style="display: block;">
+                <p>Dates of Employment</p>
+                <ul>
+                    <li>Responsibility or achievement</li>
+                    <li>Another responsibility or achievement</li>
+                </ul>
+            <p>Dates of Employment</p>
+                <ul>
+                    <li>Responsibility or achievement</li>
+                    <li>Another responsibility or achievement</li>
+                </ul>
+            <p>Dates of Employment</p>
+                <ul>
+                    <li>Responsibility or achievement</li>
+                    <li>Another responsibility or achievement</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="dropdown">
+            <button class="dropdown-button" onclick="toggleDropdown('otherexp')">My other passion projects</button>
+            <div id="otherexp" class="dropdown-content" style="display: block;">
+                <p>Dates of Employment</p>
+                <ul>
+                    <li>Responsibility or achievement</li>
+                    <li>Another responsibility or achievement</li>
+                </ul>
+            <p>Dates of Employment</p>
+                <ul>
+                    <li>Responsibility or achievement</li>
+                    <li>Another responsibility or achievement</li>
+                </ul>
+            <p>Dates of Employment</p>
+                <ul>
+                    <li>Responsibility or achievement</li>
+                    <li>Another responsibility or achievement</li>
+                </ul>
+            </div>
+        </section>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>

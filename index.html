@@ -3,35 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haley Zeri - Home</title>
+    <title>Your Name - Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <a href="index.html">Home</a> |
-            <a href="work_experience.html">Work Experience</a> |
-            <a href="publications.html">Publications & Projects</a> |
-            <a href="contact.html">Contact Me</a>
-        </nav>
-    </header>
 
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">Haley Zeri</a>
+        <div class="navbar-links">
+            <a href="work_experience.html">Experience</a>
+            <a href="publications.html">Research</a>
+            <a href="awards.html">Awards</a>
+            <a href="contact.html" class="contact-button">Contact Me</a>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <!-- Main Content -->
     <main>
+        <!-- Top Section with Photo and Description -->
         <section id="home-container">
             <div class="photo-column">
-                <img src="Haley Zeri Headshot.jpeg" alt="Haley Zeri" class="profile-photo">
+                <img src="Haley Zeri Headshot.jpeg" alt="Your Name" class="profile-photo">
             </div>
             <div class="info-column">
                 <h1>Your Name</h1>
                 <p><strong>Web Developer | Designer | Other Professional Title</strong></p>
-                <p>A short paragraph about your background, skills, and career goals. Here, you can highlight your strengths and personality in a brief, engaging way.</p>
+                <p>A short paragraph about your background, skills, and career goals.</p>
             </div>
         </section>
-        
-        <section id="additional-info">
-            <h2>More About Me</h2>
-            <p>Here you can write additional text or details about yourself. This might include your hobbies, passions, or an introductory paragraph for potential employers or collaborators to know you better.</p>
+
+        <!-- Three Link Sections -->
+        <section class="link-section">
+            <h2>Work Experience</h2>
+            <p>A brief description of your professional background and work experience.</p>
+            <a href="work_experience.html#specific-section" class="button">View Work Experience</a>
         </section>
+
+        <section class="link-section">
+            <h2>Publications & Projects</h2>
+            <p>Details of your publications, notable projects, and achievements.</p>
+            <a href="publications.html#specific-section" class="button">View Publications & Projects</a>
+        </section>
+
+        <section class="link-section">
+            <h2>Skills & Expertise</h2>
+            <p>List of key skills and areas of expertise relevant to your career.</p>
+            <a href="skills.html#specific-section" class="button">View Skills</a>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-section">
+            <h2>Let's Get to Know Each Other</h2>
+            <a href="contact.html" class="button">Contact Me</a>
+        </section>        
     </main>
+
+    <!-- Footer with Contact Information -->
+    <footer>
+        <p>Contact: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile">Your LinkedIn</a> | GitHub: <a href="https://github.com/yourprofile">Your GitHub</a></p>
+    </footer>
 </body>
 </html>
