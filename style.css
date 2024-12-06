@@ -125,6 +125,7 @@ header {
     margin: 10px auto;
 }
 
+
 /* Styling for link sections */
 .link-section {
     margin: 20px 0;
@@ -195,6 +196,37 @@ header {
     height: 100%; /* Fills the entire height of the skill bar */
     border-radius: 8px 0 0 8px; /* Rounded edges */
     transition: width 0.5s ease; /* Smooth animation for the bar */
+}
+
+.skill-cards {
+    display: grid; /* Enables grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 15px; /* Adds spacing between cards */
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #f4e4ec;
+    padding: 10px 15px; /* Smaller padding for compact cards */
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: "Montserrat", sans-serif;
+}
+
+.card:hover {
+    transform: translateY(-3px); /* Slight hover effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Enhanced hover shadow */
+}
+
+.card h4 {
+    font-size: 14px; /* Smaller text size */
+    margin: 0; /* Remove margin */
+    color: #5a3b4d;
+    white-space: nowrap; /* Prevents text wrapping */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Adds "..." for overflowing text */
 }
 
 /* Contact section */
