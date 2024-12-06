@@ -1,17 +1,57 @@
 /* General styling */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Alice", serif;
+    font-weight: normal;
+    font-style: normal;
+}
+
+p {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: #724b48;
+}
+
+h1, h2 {
+    color: #724b48
+}
+
+h2 {
+    font-family: "Alice", serif;
+    background-color: #f4e4ec;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: flex;
+}
+
+#description {
+    color: #724b48;
+}
+
+.profile-photo {
+    width: 500px; 
+    height: auto; 
+}
+
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-family: "Alice", serif;
+    color: #ab97a9;
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background-color: #f4f4f9;
+    background-color: #ffffff;
 }
 
 /* Header styling */
 header {
     padding: 10px 20px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #724b48;
     margin-bottom: 20px; /* Add space below the header */
 }
 
@@ -36,20 +76,20 @@ header {
 
 .navbar-links a {
     text-decoration: none;
-    color: #0073e6;
+    color: #724b48;
     font-weight: normal;
 }
 
 .navbar-links .contact-button {
-    background-color: #0073e6;
-    color: #fff;
+    background-color: #d6bdd3;
+    color: #724b48;
     padding: 8px 15px;
     border-radius: 5px;
     text-decoration: none;
 }
 
 .navbar-links .contact-button:hover {
-    background-color: #005bb5;
+    background-color: #ab97a9;
 }
 
 /* Two-column layout for the top section */
@@ -77,6 +117,13 @@ header {
     object-fit: cover; /* Ensures the image fills the rectangle without distortion */
 }
 
+.exp-icon {
+    width: 100%;
+    max-width: 1600px;
+    height: auto; 
+    display: block; 
+    margin: 10px auto;
+}
 
 /* Styling for link sections */
 .link-section {
@@ -86,7 +133,7 @@ header {
 
 .link-section h2 {
     font-size: 1.5em;
-    color: #333;
+    color: #724b48;
     padding-bottom: 5px;
     font-weight: bold;
 }
@@ -101,17 +148,54 @@ header {
     width: fit-content; /* Adjusts the button width to its content */
     margin: 10px auto; /* Centers the button within the section */
     padding: 10px 20px;
-    color: #fff;
-    background-color: #0073e6;
+    color: #724b48;
+    background-color: #d6bdd3;
     text-decoration: none;
     border-radius: 5px;
     text-align: center;
 }
 
 .link-section .button:hover {
-    background-color: #005bb5;
+    background-color: #ab97a9;
 }
 
+.skills-section {
+    margin-top: 20px;
+}
+
+.skills-section h3 {
+    font-family: "Georgia", serif;
+    color: #5a3b4d;
+    margin-bottom: 10px;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    color: #5a3b4d;
+}
+
+.skill-bar {
+    background-color: #f4e4ec; /* Light background for the skill bar */
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    height: 12px;
+    width: 100%; /* Full width container */
+}
+
+.skill-fill {
+    background-color: #a67c8e; /* Color of the filled section */
+    height: 100%; /* Fills the entire height of the skill bar */
+    border-radius: 8px 0 0 8px; /* Rounded edges */
+    transition: width 0.5s ease; /* Smooth animation for the bar */
+}
 
 /* Contact section */
 #contact-section {
@@ -122,8 +206,8 @@ header {
 .button {
     display: inline-block;
     padding: 10px 20px;
-    color: #fff;
-    background-color: #0073e6;
+    color: #724b48;
+    background-color: #d6bdd3;
     text-decoration: none;
     border-radius: 5px;
     text-align: center;
@@ -131,19 +215,19 @@ header {
 }
 
 .button:hover {
-    background-color: #005bb5;
+    background-color: #ab97a9;
 }
 
 /* Footer styling */
 footer {
     text-align: center;
     font-size: 0.9em;
-    color: #666;
+    color: #724b48;
     margin-top: 40px;
 }
 
 footer a {
-    color: #0073e6;
+    color: #724b48;
     text-decoration: none;
 }
 
@@ -166,7 +250,7 @@ footer a:hover {
     padding: 15px;
     text-align: left;
     font-size: 1.2em;
-    background-color: #f4f4f9;
+    background-color: #ffffff;
     color: #333;
     border: 1px solid #ddd;
     cursor: pointer;
