@@ -10,6 +10,7 @@
 </head>
 
 <header>
+<!--Navbar-->
     <nav class="navbar">
         <a href="index.html" class="navbar-brand">Haley Zeri</a>
         <div class="navbar-links">
@@ -22,110 +23,148 @@
 </header>
 
 <body>
-    <!-- Main Content -->
-    <main>
-        <!-- Top Section with Photo and Description -->
-        <section id="home-container">
-            <div class="photo-column">
-                <img src="Haley Zeri Headshot Pink.png" alt="Haley Zeri" class="profile-photo">
-            </div>
-            <div class="info-column">
-                <h1>Hi, I'm Haley!</h1>
-                <p id="description"><strong>Undergraduate Research Assistant | Direct Support Professional | Psychological Sciences & Spanish @ Purdue University</strong></p>
-                <p>I am an aspiring clinical scientist and clinical psychological who desires to bridge research and practice within autism and developmental disability research to improve quality of life within the community.</p>
-            </div>
-        </section>
-
-        <!-- Three Link Sections -->
+  <!-- Introduction -->
+  <main>
+    <section id="home-container">
+        <div class="photo-column">
+          <!-- Add the "interactive" class to enable hover effects -->
+          <img src="Haley Zeri Headshot Pink.png" alt="Haley Zeri" class="profile-photo interactive">
+      </div>
+      <div class="info-column">
+          <h1>Hi, I'm Haley!</h1>
+          <p id="description"><strong>Undergraduate Research Assistant | Direct Support Professional | Psychological Sciences & Spanish @ Purdue University</strong></p>
+          <p>I am an aspiring clinical scientist and clinical psychological who desires to bridge research and practice within autism and developmental disability research to improve quality of life within the community.</p>
+      </div>
+    </section>
+        <!--Research & Clinical Experience-->
         <section class="link-section">
-            <h2>Research & Clinical Experience</h2>
-            <p>As a research assistant, I have <b>7 semesters</b> of research experience across <b>3 labs </b> at Purdue University:</p>
-            <img src="Labs icon.png" alt="Lab icons" class="exp-icon">
-            <p>With over <b>1,200 hours </b> of experience, I have honed several advanced research skills, including:</p>
-            <div class="skills-section">
-                <div class="skill">
-                    <span class="skill-name">Project Management</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 75%;"></div>
-                    </div>
+            <section id="research-experience">
+                <h2>Research & Clinical Experience</h2>
+                <p class="section-intro">As a research assistant, I have <b>7 semesters</b> of research experience across <b>3 labs </b> at Purdue University:</p>
+                <div class="card-container three-cards">
+                  <div class="card">
+                    <img src="dna.png" alt="Neurodevelopmental Family Lab" class="card-img">
+                    <h3>Neurodevelopmental Family Lab</h3>
+                    <p>Summary of your contributions in this lab.</p>
+                  </div>
+                  <div class="card">
+                    <img src="social-justice.png" alt="TREKS Research Generator" class="card-img">
+                    <h3>TREKS Research Generator</h3>
+                    <p>Brief description about your work and involvement.</p>
+                  </div>
+                  <div class="card">
+                    <img src="family.png" alt="Sleep & Developmental Studies Lab" class="card-img">
+                    <h3>Sleep & Developmental Studies Lab</h3>
+                    <p>Summary of your contributions in this lab.</p>
+                  </div>
                 </div>
-                <div class="skill">
-                    <span class="skill-name">Novel Study Design</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 75%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span class="skill-name">Participant Recruitment & Retention</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 80%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span class="skill-name">Data Analysis & Visualization</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 85%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span class="skill-name">R Coding & SPSS</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 90%;"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <span class="skill-name">Dissemnation</span>
-                    <div class="skill-bar">
-                        <div class="skill-fill" style="width: 85%;"></div>
-                    </div>
-                </div>
-            </div>
-            <p>Additionally, I have clinical experience working with children with developmental disabilites in both community and clinical settings:</p>
-            <img src="Clinical icon.png" alt="Clinical icons" class="exp-icon">
-            <div class="skill-cards">
-                <div class="card">
-                    <h4>Data Analysis</h4>
-                    <p>Experienced in Python, R, and Excel for data analysis.</p>
-                </div>
-                <div class="card">
-                    <h4>Critical Thinking</h4>
-                    <p>Proven ability to solve problems in research contexts.</p>
-                </div>
-                <div class="card">
-                    <h4>Research Writing</h4>
-                    <p>Skilled in writing and editing research papers and articles.</p>
-                </div>
-                <div class="card">
-                    <h4>Project Management</h4>
-                    <p>Coordinated teams and delivered successful outcomes on projects.</p>
-                </div>
-            </div>            
-            <a href="work_experience.html#specific-section" class="button">Learn more about my experience</a>
-        </section>
+              </section> 
 
-        <section class="link-section">
-            <h2>Publications & Presentations</h2>
-            <p>Details of your publications, notable projects, and achievements.</p>
-            <a href="publications.html#specific-section" class="button">View Publications & Projects</a>
+            <p class="section-intro">Additionally, I have clinical experience working with children with developmental disabilites in both community and clinical settings:</p>
+            <section id="clinical-experience">
+                <div class="card-container two-cards">
+                  <div class="card">
+                    <img src="GH_icon.png" alt="GH_icon" class="card-img">
+                    <h3>Direct Support Professional @ Grant’s House</h3>
+                    <p>2+ years working with children with developmental disabilities.</p>
+                  </div>
+                  <div class="card">
+                    <img src="ANDY_icon.png" alt="ANDY_icon" class="card-img">
+                    <h3>Camp Counselor @ Camp ANDY</h3>
+                    <p>200+ hours implementing an evidence-based summer treatment program.</p>
+                  </div>
+                </div>
+                <a href="skills.html#specific-section" class="button">View All My Experience</a>
+              </section>              
         </section>
-
+        <!--Projects & Publications section-->
         <section class="link-section">
+            <section class="link-section">
+            <section id="research-experience">
+                <h2>Projects & Publications</h2>
+                <p class="section-intro">I have experience with study conduct & dissemenation honed across my honors thesis and several presentations:</p>
+                <div class="card-container three-cards">
+                  <div class="card">
+                    <img src="Thesis_logo.png" alt="Thesis logo" class="card-img">
+                    <h3>Independent honors thesis</h3>
+                    <p>Assessed caregiver perspectives of services for children and adults with developmental disabilites.</p>
+                  </div>
+                  <div class="card">
+                    <img src="publishing.png" alt="publishing" class="card-img">
+                    <h3>Published as first author</h3>
+                    <p>Published in a peer-reviewed indexed journal with another currently under review.</p>
+                  </div>
+                  <div class="card">
+                    <img src="presentation.png" alt="presentation" class="card-img">
+                    <h3>8 posters & oral presentations</h3>
+                    <p>In regional, national, and international conferences.</p>
+                  </div>
+                </div>
+                  <a href="skills.html#specific-section" class="button">View All My Work</a>
+              </section> 
+        </section>
+        <!--Skills section-->
             <h2>Skills & Expertise</h2>
-            <p>List of key skills and areas of expertise relevant to your career.</p>
-            <a href="skills.html#specific-section" class="button">View Skills</a>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact-section">
-            <h2>Let's connect!</h2>
-            <a href="contact.html" class="button">Contact Me</a>
-        </section>        
+            <section id="skills-section">
+              <p class="section-intro">Across my two majors in Psychological Sciences & Spanish and variety of expereiences, I have honed many skills:</p>
+              <div class="skills-container">
+                  <div class="skill-card">
+                      <img src="4skill.png" alt="skill rating" class="skill-icon">
+                      <h3>Project Management</h3>
+                  </div>
+                  <div class="skill-card">
+                      <img src="3skill.png" alt="skill rating" class="skill-icon">
+                      <h3>Novel Study Design</h3>
+                  </div>
+                  <div class="skill-card">
+                      <img src="4skill.png" alt="skill rating" class="skill-icon">
+                      <h3>Participant Recruitment</h3>
+                  </div>
+                  <div class="skill-card">
+                    <img src="4skill.png" alt="skill rating" class="skill-icon">
+                    <h3>Team Work & Management</h3>
+                </div>
+                <div class="skill-card">
+                  <img src="4skill.png" alt="skill rating" class="skill-icon">
+                  <h3>Data Analysis & Visualization</h3>
+                </div>
+                <div class="skill-card">
+                      <img src="4skill.png" alt="skill rating" class="skill-icon">
+                      <h3>R Coding Language & SPSS</h3>
+                </div>
+                  <div class="skill-card">
+                      <img src="5skill.png" alt="skill rating" class="skill-icon">
+                      <h3>Dissemenation</h3>
+                  </div>
+                  <div class="skill-card">
+                      <img src="5skill.png" alt="skill rating" class="skill-icon">
+                      <h3>Spanish</h3>
+                  </div>
+              </div>
+            <a href="skills.html#specific-section" class="button">View All My Skills</a>
+        </section>     
     </main>
 
     <!-- Footer with Contact Information -->
     <footer>
-        <p><b>Contact:</b> <a href="mailto:your.email@example.com">your.email@example.com</a></p>
-        <p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/yourprofile">Your LinkedIn</a></p>
-    </footer>
+      <hr class="bottom-line">
+      <div class="footer-container">
+          <div class="footer-header">
+              <h2>Contact Me</h2>
+              <div class="dots-line">• • • • •</div>
+          </div>
+          <div class="footer-icons">
+              <a href="mailto:haleyzeri@gmail.com" class="footer-icon" aria-label="Email">
+                  <img src="mail (1).png" alt="Email" class="icon">
+              </a>
+              <a href="https://www.linkedin.com/in/haleyzeri" class="footer-icon" aria-label="LinkedIn">
+                  <img src="linkedin (1).png" alt="LinkedIn" class="icon">
+              </a>
+              <a href="Haley Zeri CV Website.pdf" download class="footer-icon" aria-label="Download CV">
+                  <img src="CV (1).png" alt="Download CV" class="icon">
+              </a>
+          </div>
+      </div>
+  </footer>  
 </body>
 </html>
