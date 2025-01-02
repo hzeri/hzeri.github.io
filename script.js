@@ -26,3 +26,20 @@ tabs.forEach(tab => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const tabParam = urlParams.get('tab');
+
+    if (tabParam) {
+        const tabButton = document.querySelector(`.tab-button[data-tab="${tabParam}"]`);
+        const tabContent = document.querySelector(`#${tabParam}`);
+
+        if (tabButton && tabContent) {
+            document.querySelectorAll('.tab-button').forEach(button => button.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+            tabButton.classList.add('active');
+            tabContent.classList.add('active');
+        }
+    }
+});
+
