@@ -26,6 +26,16 @@ body {
     background-color: #ffffff;
 }
 
+a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+a:hover {
+    text-decoration: none; 
+    color: inherit;
+}
+
 /* ==================== Header ==================== */
 header {
     padding: 10px 20px;
@@ -480,43 +490,108 @@ hr {
     border-top: 1px solid #ddd;
     margin: 10px 0;
 }
-/* Experience page styling */
 
-.exp-section h3 {
-color: #724b48;
+/* Experience page styling */
+#experience-page .exp-card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px; 
+    margin-top: 20px;
 }
 
+#experience-page .exp-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#experience-page .exp-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#experience-page .exp-card h4 {
+    font-family: "Alice", serif;
+    font-size: 1.2em;
+    color: #724b48;
+    margin-bottom: 10px;
+}
+
+#experience-page .exp-card p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    color: #5a3b4d;
+}
+
+@media (max-width: 768px) {
+    #experience-page .exp-card-container {
+        grid-template-columns: 1fr; 
+        gap: 10px;
+    }
+}
 #exp-header {
     font-size: 1.5em;
     color: #724b48;
-    padding-bottom: 5px;
     font-weight: bold;
     background-color: #f4e4ec;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 40px auto 20px;
     height: 50px;
-    padding: 0 20px;
-    margin: 0 auto;
-    margin-bottom: 10px;
+    padding-bottom: 5px;
 }
 
-.lab-name {
-    display: inline-block;
-    margin-bottom: 10px; /* Add some space below the line */
-    display: inline-block; /* Ensure the line adjusts to the text width */
-    background-color: #f4e4ec; /* Highlight color */
-    padding: 5px 10px; /* Add padding around the text */
-    border-radius: 5px; /* Optional: round the edges */
+.exp-section {
+    margin-top: 10px; /* Add spacing above the tab section */
 }
-
 
 .tabs {
     display: flex;
     gap: 10px;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Spacing below the tabs */
+}
+
+.tab-content {
+    display: none;
+    padding: 20px; /* Inner padding */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 10px; /* Spacing between tabs and tab content */
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.lab-name {
+    margin-bottom: 10px;
+    display: inline-block;
+    background-color: #f4e4ec;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.bottom-line {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+ul li {
+    color: #724b48; /* Change bullet point text to brown */
+    margin-bottom: 5px; /* Add spacing between list items */
+}
+
+.exp-section h3 {
+color: #724b48;
 }
 
 .tab-button {
@@ -534,22 +609,6 @@ color: #724b48;
     background-color: #724b48;
     color: #fff;
 }
-
-.tab-content {
-    display: none;
-}
-
-.tab-content.active {
-    display: block;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-}
-
-ul li {
-    color: #724b48; /* Change the bullet point text to brown */
-}
-
 
 /* Awards page styling */
 #awards-intro {
