@@ -23,87 +23,68 @@
 
 <!-- Page Content -->
 <main>
-    <main id="experience-page">
-        <div id="exp-header">
-            <h3>Grants</h3>
+<section id="grants-awards">
+    <!-- Category: Grants and Funding -->
+    <div class="pink-header">
+        <h3>Awards</h3>
+    </div>
+    <div class="award-category">
+        <div class="award-grid">
+            <div class="award-card">
+                <h4>Purdue Office of Engagement Service Learning Grant</h4>
+                <p><em>March 2024 ($500)</em></p>
+                <button class="award-button" onclick="openModal('pdf-url.pdf')">View Details</button>
+            </div>
+            <div class="award-card">
+                <h4>INSAR Student and Trainee Travel Award</h4>
+                <p><em>February 2024 ($500)</em></p>
+            </div>
+            <div class="award-card">
+                <h4>Honors College Creative Endeavors Scholarship</h4>
+                <p><em>December 2023 ($1,000)</em></p>
+                <button class="award-button" onclick="openModal('photo-url.jpg')">View Photo</button>
+            </div>
         </div>
-        <section class="exp-section">
-            <div class="tabs">
-                <button class="tab-button active" data-tab="grant1">Honors Thesis Project</button>
-                <button class="tab-button" data-tab="grant2">Manuscript Under Review</button>
-                <button class="tab-button" data-tab="grant3">Presentations</button>
-            </div>
-            <div class="tab-content active" id="grant1">
-                <h3 class="lab-name">Honors Thesis Project</h3>
-                <hr class="bottom-line">
-                <p><strong>Undergraduate Research Assistant</strong></p>
-                <p><em>January 2023 - Present</em></p>
-                <ul>
-                    <li>Sample</li>
-                </ul>
-            </div>
-        </section>
-    <div class="tab-content" id="grant2">
-        <h3 class="lab-name">Manuscript Under Review</h3>
-        <hr class="bottom-line">
-        <p><strong>Manuscript Title</strong></p>
-        <p><em>August 2022 - Present</em></p>
-        <ul>
-            <li>Sample</li>
-    
-        </ul>
-    </div>    
-    <div class="tab-content" id="grant3">
-        <h3 class="lab-name">Honors Thesis Presentations</h3>
-        <hr class="bottom-line">
-        <p><strong>Undergraduate Research Assistant</strong></p>
-        <p><em>January 2022 - May 2024</em></p>
-        <ul>
-            <li>Sample</li>
-    
-        </ul>
-    </div>    
+    </div>
 
-    <main id="experience-page">
-        <div id="exp-header">
-            <h3>Awards</h3>
+    <!-- Category: Awards and Recognitions -->
+    <div class="award-category">
+        <h3>Awards and Recognitions</h3>
+        <div class="award-grid">
+            <div class="award-card">
+                <h4>Sleep Research Society Infographic Contest</h4>
+                <p><em>May 2024 (First Place)</em></p>
+            </div>
+            <div class="award-card">
+                <h4>Poster Award - Purdue Psychological Sciences Conference</h4>
+                <p><em>April 2023 (Honorable Mention, $200)</em></p>
+            </div>
         </div>
-        <section class="exp-section">
-            <div class="tabs">
-                <button class="tab-button active" data-tab="award1">Honors Thesis Project</button>
-                <button class="tab-button" data-tab="award2">Manuscript Under Review</button>
-                <button class="tab-button" data-tab="award3">Presentations</button>
+    </div>
+
+    <!-- Category: Scholarships -->
+    <div class="award-category">
+        <h3>Scholarships</h3>
+        <div class="award-grid">
+            <div class="award-card">
+                <h4>Big Move Short Term Scholarship</h4>
+                <p><em>May 2022 ($3,000)</em></p>
             </div>
-            <div class="tab-content active" id="award1">
-                <h3 class="lab-name">Honors Thesis Project</h3>
-                <hr class="bottom-line">
-                <p><strong>Undergraduate Research Assistant</strong></p>
-                <p><em>January 2023 - Present</em></p>
-                <ul>
-                    <li>Sample</li>
-                </ul>
+            <div class="award-card">
+                <h4>Kiwanis Evening Club Scholarship</h4>
+                <p><em>May 2021 ($3,000)</em></p>
             </div>
-        </section>
-    <div class="tab-content" id="award2">
-        <h3 class="lab-name">Manuscript Under Review</h3>
-        <hr class="bottom-line">
-        <p><strong>Manuscript Title</strong></p>
-        <p><em>August 2022 - Present</em></p>
-        <ul>
-            <li>Sample</li>
-    
-        </ul>
-    </div>    
-    <div class="tab-content" id="award3">
-        <h3 class="lab-name">Honors Thesis Presentations</h3>
-        <hr class="bottom-line">
-        <p><strong>Undergraduate Research Assistant</strong></p>
-        <p><em>January 2022 - May 2024</em></p>
-        <ul>
-            <li>Sample</li>
-    
-        </ul>
-    </div> 
+        </div>
+    </div>
+
+    <!-- Modal for Photos or PDFs -->
+    <div id="award-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe id="award-viewer" src="" width="100%" height="500px" style="border: none;"></iframe>
+        </div>
+    </div>
+</section>
 </main>
 
  <!-- Footer with Contact Information -->

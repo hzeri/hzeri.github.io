@@ -533,6 +533,7 @@ hr {
         gap: 10px;
     }
 }
+
 #exp-header {
     font-size: 1.5em;
     color: #724b48;
@@ -560,6 +561,22 @@ hr {
     height: 50px;
     padding-bottom: 5px;
 }
+
+#pink-header {
+    font-size: 1.5em !important;
+    color: #724b48 !important;
+    font-weight: bold !important;
+    background-color: #f4e4ec !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 40px auto 20px !important;
+    height: 50px !important;
+    padding-bottom: 5px !important;
+}
+
+
 
 
 .exp-section {
@@ -842,7 +859,101 @@ color: #724b48;
 
 
 /* Awards page styling */
-#awards-intro {
-    text-align: left;
+/* Section Styling */
+#grants-awards {
+    padding: 20px;
+}
+
+#grants-awards h2 {
+    text-align: center;
+    font-family: 'Alice', serif;
+    color: #724b48;
+    margin-bottom: 30px;
+}
+
+/* Award Categories */
+.award-category {
+    margin-bottom: 40px;
+}
+
+.award-category h3 {
+    font-family: 'Alice', serif;
+    color: #5a3b4d;
     margin-bottom: 20px;
+}
+
+/* Award Grid */
+.award-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Award Card */
+.award-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #d6bdd3;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Award Button */
+.award-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #724b48;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.award-button:hover {
+    background-color: #ab97a9;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
 }

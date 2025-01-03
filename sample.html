@@ -1,124 +1,206 @@
 from IPython.core.display import display, HTML
 
-# Example of file-folder style tabs with dynamic content
-html_code_file_folder = """
+# HTML for Grants and Awards Page Example
+html_code_grants_awards = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>File Folder Tabs Example</title>
+<title>Grants and Awards</title>
 <style>
-/* General Styles */
-body {
-    font-family: 'Alice', serif;
-    color: #724b48;
-    background-color: #f9f9f9;
+/* Section Styling */
+#grants-awards {
     padding: 20px;
-    margin: 0;
+    font-family: 'Alice', serif;
+    background-color: #f9f9f9;
 }
 
-/* File Folder Tabs */
-.file-folder-tabs {
-    display: flex;
-    border-bottom: 2px solid #d6bdd3;
+#grants-awards h2 {
+    text-align: center;
+    font-family: 'Alice', serif;
+    color: #724b48;
+    margin-bottom: 30px;
+}
+
+/* Award Categories */
+.award-category {
+    margin-bottom: 40px;
+}
+
+.award-category h3 {
+    font-family: 'Alice', serif;
+    color: #5a3b4d;
     margin-bottom: 20px;
 }
 
-.file-tab {
-    background-color: #f4e4ec;
-    color: #724b48;
-    padding: 10px 20px;
+/* Award Grid */
+.award-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Award Card */
+.award-card {
+    background-color: #f9f9f9;
+    padding: 20px;
     border: 1px solid #d6bdd3;
-    border-bottom: none;
-    border-radius: 5px 5px 0 0;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Award Button */
+.award-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #724b48;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
     cursor: pointer;
-    font-family: "Alice", serif;
+    text-align: center;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
-.file-tab.active {
-    background-color: #724b48;
-    color: white;
-}
-
-.file-tab:hover {
+.award-button:hover {
     background-color: #ab97a9;
-    color: white;
 }
 
-/* Folder Content */
-.folder-content {
+/* Modal */
+.modal {
     display: none;
-    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
     padding: 20px;
-    border: 1px solid #d6bdd3;
-    border-radius: 0 5px 5px 5px;
-    margin-top: -1px; /* Align with tabs */
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.folder-content.active {
-    display: block;
-}
-
-/* Content Styling */
-h3 {
-    color: #724b48;
-    font-size: 1.4rem;
-}
-
-p {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #5a3b4d;
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
 }
 </style>
 </head>
 <body>
-<section id="highlighted-project">
-    <h2>Honors Thesis Project</h2>
-    <div class="file-folder-tabs">
-        <button class="file-tab active" data-folder="overview">Overview</button>
-        <button class="file-tab" data-folder="methodology">Methodology</button>
-        <button class="file-tab" data-folder="results">Results</button>
-        <button class="file-tab" data-folder="conclusion">Conclusion</button>
+<section id="grants-awards">
+    <h2>Grants and Awards</h2>
+
+    <!-- Category: Grants and Funding -->
+    <div class="award-category">
+        <h3>Grants and Funding</h3>
+        <div class="award-grid">
+            <div class="award-card">
+                <h4>Purdue Office of Engagement Service Learning Grant</h4>
+                <p><em>March 2024 ($500)</em></p>
+                <button class="award-button" onclick="openModal('pdf-url.pdf')">View Details</button>
+            </div>
+            <div class="award-card">
+                <h4>INSAR Student and Trainee Travel Award</h4>
+                <p><em>February 2024 ($500)</em></p>
+            </div>
+            <div class="award-card">
+                <h4>Honors College Creative Endeavors Scholarship</h4>
+                <p><em>December 2023 ($1,000)</em></p>
+                <button class="award-button" onclick="openModal('photo-url.jpg')">View Photo</button>
+            </div>
+        </div>
     </div>
-    <div class="folder-content active" id="overview">
-        <h3>Overview</h3>
-        <p>This is the overview of the honors thesis project. It provides a summary of the project's goals and objectives.</p>
+
+    <!-- Category: Awards and Recognitions -->
+    <div class="award-category">
+        <h3>Awards and Recognitions</h3>
+        <div class="award-grid">
+            <div class="award-card">
+                <h4>Sleep Research Society Infographic Contest</h4>
+                <p><em>May 2024 (First Place)</em></p>
+            </div>
+            <div class="award-card">
+                <h4>Poster Award - Purdue Psychological Sciences Conference</h4>
+                <p><em>April 2023 (Honorable Mention, $200)</em></p>
+            </div>
+        </div>
     </div>
-    <div class="folder-content" id="methodology">
-        <h3>Methodology</h3>
-        <p>The methodology section explains the research design, data collection methods, and analytical techniques used in the project.</p>
+
+    <!-- Category: Scholarships -->
+    <div class="award-category">
+        <h3>Scholarships</h3>
+        <div class="award-grid">
+            <div class="award-card">
+                <h4>Big Move Short Term Scholarship</h4>
+                <p><em>May 2022 ($3,000)</em></p>
+            </div>
+            <div class="award-card">
+                <h4>Kiwanis Evening Club Scholarship</h4>
+                <p><em>May 2021 ($3,000)</em></p>
+            </div>
+        </div>
     </div>
-    <div class="folder-content" id="results">
-        <h3>Results</h3>
-        <p>This section showcases the key findings and outcomes from the honors thesis project.</p>
-    </div>
-    <div class="folder-content" id="conclusion">
-        <h3>Conclusion</h3>
-        <p>The conclusion highlights the implications of the findings and future directions for research.</p>
+
+    <!-- Modal for Photos or PDFs -->
+    <div id="award-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe id="award-viewer" src="" width="100%" height="500px" style="border: none;"></iframe>
+        </div>
     </div>
 </section>
 
 <script>
-document.querySelectorAll('.file-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-        // Remove 'active' class from all tabs and contents
-        document.querySelectorAll('.file-tab').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.folder-content').forEach(content => content.classList.remove('active'));
+function openModal(fileUrl) {
+    const modal = document.getElementById('award-modal');
+    const viewer = document.getElementById('award-viewer');
+    viewer.src = fileUrl; // Set the file (PDF/Photo) dynamically
+    modal.style.display = 'flex'; // Show modal
+}
 
-        // Add 'active' class to clicked tab and corresponding content
-        tab.classList.add('active');
-        const folderId = tab.getAttribute('data-folder');
-        document.getElementById(folderId).classList.add('active');
-    });
-});
+function closeModal() {
+    const modal = document.getElementById('award-modal');
+    const viewer = document.getElementById('award-viewer');
+    modal.style.display = 'none'; // Hide modal
+    viewer.src = ''; // Clear the iframe to stop loading the file
+}
+
+// Close modal if clicking outside the content
+window.onclick = function(event) {
+    const modal = document.getElementById('award-modal');
+    if (event.target === modal) {
+        closeModal();
+    }
+};
 </script>
 </body>
 </html>
 """
 
 # Display the HTML example
-display(HTML(html_code_file_folder))
+display(HTML(html_code_grants_awards))

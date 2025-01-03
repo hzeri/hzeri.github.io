@@ -91,4 +91,26 @@ document.querySelectorAll('.file-tab').forEach(tab => {
     });
 });
 
+function openModal(fileUrl) {
+    const modal = document.getElementById('award-modal');
+    const viewer = document.getElementById('award-viewer');
+    viewer.src = fileUrl; // Set the file (PDF/Photo) dynamically
+    modal.style.display = 'flex'; // Show modal
+}
+
+function closeModal() {
+    const modal = document.getElementById('award-modal');
+    const viewer = document.getElementById('award-viewer');
+    modal.style.display = 'none'; // Hide modal
+    viewer.src = ''; // Clear the iframe to stop loading the file
+}
+
+// Close modal if clicking outside the content
+window.onclick = function(event) {
+    const modal = document.getElementById('award-modal');
+    if (event.target === modal) {
+        closeModal();
+    }
+};
+
 
