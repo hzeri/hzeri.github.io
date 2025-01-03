@@ -43,3 +43,52 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+function openModal(pdfUrl) {
+    const modal = document.getElementById('modal');
+    const viewer = document.getElementById('pdf-viewer');
+    viewer.src = pdfUrl;
+    modal.style.display = 'flex';
+}
+
+function closeModal() {
+    const modal = document.getElementById('modal');
+    const viewer = document.getElementById('pdf-viewer');
+    modal.style.display = 'none';
+    viewer.src = ''; // Clear the iframe to stop loading the PDF
+}
+
+// Close modal when clicking outside the content
+window.onclick = function (event) {
+    const modal = document.getElementById('modal');
+    if (event.target === modal) {
+        closeModal();
+    }
+};
+
+function openTextModal(abstractText) {
+    const modal = document.getElementById('text-modal');
+    const content = document.getElementById('abstract-content');
+    content.textContent = abstractText; // Set the abstract text dynamically
+    modal.style.display = 'flex'; // Show modal
+}
+
+function closeTextModal() {
+    const modal = document.getElementById('text-modal');
+    modal.style.display = 'none'; // Hide modal
+    document.getElementById('abstract-content').textContent = ''; // Clear the content
+}
+
+document.querySelectorAll('.file-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        // Remove 'active' class from all tabs and contents
+        document.querySelectorAll('.file-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.folder-content').forEach(content => content.classList.remove('active'));
+
+        // Add 'active' class to clicked tab and corresponding content
+        tab.classList.add('active');
+        const folderId = tab.getAttribute('data-folder');
+        document.getElementById(folderId).classList.add('active');
+    });
+});
+
+

@@ -547,6 +547,21 @@ hr {
     padding-bottom: 5px;
 }
 
+#research-header {
+    font-size: 1.5em;
+    color: #724b48;
+    font-weight: bold;
+    background-color: #f4e4ec;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 20px;
+    height: 50px;
+    padding-bottom: 5px;
+}
+
+
 .exp-section {
     margin-top: 10px; /* Add spacing above the tab section */
 }
@@ -610,6 +625,221 @@ color: #724b48;
     background-color: #724b48;
     color: #fff;
 }
+
+/* Publications page styling */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.research-card {
+    padding: 20px;
+    background: #f4f4f4;
+    border: 1px solid #ccc;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 8px;
+}
+
+.research-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Make sure it's above all other elements */
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    z-index: 1010; /* Ensure modal content stays above modal background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+}
+
+#abstract-content {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
+}
+
+#oralpres .research-card h3 {
+    font-family: 'Alice', serif; 
+    font-size: 1.2rem; 
+    color: #724b48; 
+    text-align: center; 
+}
+
+#posters .research-card h3 {
+    font-family: 'Alice', serif; 
+    font-size: 1.2rem; 
+    color: #724b48; 
+    text-align: center; 
+}
+
+/* File Folder Tabs */
+.file-folder-tabs {
+    display: flex;
+    border-bottom: 2px solid #d6bdd3;
+    margin-bottom: 20px;
+}
+
+.file-tab {
+    background-color: #f4e4ec;
+    color: #724b48;
+    padding: 10px 20px;
+    border: 1px solid #d6bdd3;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    font-family: "Alice", serif;
+    transition: background-color 0.3s ease;
+}
+
+.file-tab.active {
+    background-color: #724b48;
+    color: white;
+}
+
+.file-tab:hover {
+    background-color: #ab97a9;
+    color: white;
+}
+
+.folder-content {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #d6bdd3;
+    border-radius: 0 5px 5px 5px;
+    margin-top: -1px; /* Align with tabs */
+}
+
+.folder-content.active {
+    display: block;
+}
+
+/* Publications Section */
+#publications {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#publications .citation a {
+    text-decoration: underline; /* Add underline */
+    color: #724b48; /* Ensure consistent color */
+}
+
+#publications .citation a:hover {
+    color: #ab97a9; /* Optional: Change color on hover */
+    text-decoration: underline; /* Keep underline on hover */
+}
+
+
+#publications h2 {
+    color: #724b48;
+    font-family: "Alice", serif;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Card Design */
+.research-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #d6bdd3;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Center text */
+}
+
+/* Abstract Button */
+.abstract-button {
+    margin: 15px 0; /* Add spacing above and below */
+    padding: 10px 15px;
+    background-color: #724b48;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    font-family: "Alice", serif;
+}
+
+.abstract-button:hover {
+    background-color: #ab97a9;
+}
+
+/* Citation Styling */
+.citation {
+    font-size: 0.9rem;
+    color: #5a3b4d;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+
+.research-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.research-card h3 {
+    font-size: 1.2rem;
+    color: #724b48;
+    margin-bottom: 10px;
+}
+
+.research-card p {
+    font-size: 1rem;
+    color: #5a3b4d;
+    line-height: 1.6;
+}
+/* Citation Styling */
+.citation {
+    font-size: 0.9rem;
+    color: #5a3b4d;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
 
 /* Awards page styling */
 #awards-intro {

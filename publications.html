@@ -16,69 +16,67 @@
             <a href="work_experience.html">Experience</a>
             <a href="publications.html">Research</a>
             <a href="awards.html">Awards</a>
-            <a href="contact.html" class="contact-button">Contact Me</a>
+            <a href="contact.html" class="contact-button">About Me</a>
         </div>
     </nav>
 </header>
 
+<body>
+
 <main id="experience-page">
-    <div id="exp-header">
-        <h3>Honors Thesis</h3>
-    </div>
-    <section class="exp-section">
-        <div class="tabs">
-            <button class="tab-button active" data-tab="hsover">Honors Thesis Project</button>
-            <button class="tab-button" data-tab="hsman">Manuscript Under Review</button>
-            <button class="tab-button" data-tab="hspres">Presentations</button>
+    <section id="highlighted-project">
+        <div id="research-header">
+            <h3>Honors Thesis Project</h3>
         </div>
-        <div class="tab-content active" id="hsover">
-            <h3 class="lab-name">Honors Thesis Project</h3>
-            <hr class="bottom-line">
-            <p><strong>Undergraduate Research Assistant</strong></p>
-            <p><em>January 2023 - Present</em></p>
-            <ul>
-                <li>Sample</li>
-            </ul>
+        <div class="file-folder-tabs">
+            <button class="file-tab active" data-folder="overview">About the project</button>
+            <button class="file-tab" data-folder="htmanu">Manuscript under review</button>
+            <button class="file-tab" data-folder="htpastpres">Past presentations</button>
         </div>
-    </section>
-<div class="tab-content" id="hsman">
-    <h3 class="lab-name">Manuscript Under Review</h3>
-    <hr class="bottom-line">
-    <p><strong>Manuscript Title</strong></p>
-    <p><em>August 2022 - Present</em></p>
-    <ul>
-        <li>Sample</li>
-
-    </ul>
-</div>    
-<div class="tab-content" id="hspres">
-    <h3 class="lab-name">Honors Thesis Presentations</h3>
-    <hr class="bottom-line">
-    <p><strong>Undergraduate Research Assistant</strong></p>
-    <p><em>January 2022 - May 2024</em></p>
-    <ul>
-        <li>Sample</li>
-
-    </ul>
-</div>    
-    <div id="exp-header">
+        <div class="folder-content active" id="overview">
+            <h3>Unlocking the Potential: Community-Based Services - Overview</h3>
+            <p>Details about the honors thesis project overview go here.</p>
+        </div>
+        <div class="folder-content" id="htmanu">
+            <h3>Caregiver Perspectives of Day Habilitation Services: A Family-Centered and Recreationally-Focused Service for Individuals with Intellectual and Developmental Disabilities. - Manuscript Underview</h3>
+            <p>Details about the methodology go here.</p>
+        </div>
+        <div class="folder-content" id="htpastpres">
+            <h3>Past Poster presentations</h3>
+            <div class="research-card" onclick="openModal('NCUR Poster 2024 Haley Zeri.pdf')">
+                <h3>Unlocking the potential of community-based services to promote holistic life outcomes for individuals with autism and developmental disabilities</h3>
+                <p><em>National Conference on Undergraduate Research, Long Beach, CA</em></p>
+            </div>
+        </div>
+    </section>    
+    <section id="publications">
+    <div id="research-header">
         <h3>Publications</h3>
     </div>
-    <section class="exp-section">
-        <div class="tabs">
-            <button class="tab-button active" data-tab="pub">Publication</button>
+        <div class="research-grid">
+            <div class="research-card">
+                <h3>Connecting communities through student-led service-learning approaches</h3>
+                <p><em>Local Development and Society</em></p>
+                <button class="abstract-button" onclick="openTextModal('Service-learning is an educational approach combining theoretical skills and hands-on project applications, which is especially important for younger generations who guide and determine the future of their local communities. Multiplying Good: “Students in Action” (abbreviated “SIA”) is a program implemented within K-12 schools to address this need. Advisors, typically teachers, work with middle-school and high-school students to create service projects based on the students’ interests and the community’s expressed needs. However, there is inevitably a generational disconnect between advisors and students, which can create project and communication barriers, ultimately hindering students’ connection to the community. We are investigating closing this gap by taking on a mediator role as SIA coaches, working individually or in small groups, in four local schools within the Lafayette community. Thus far, we have observed our role is organically defined by the needs of students expressed verbally and implicitly. The utility of our role is influenced by the progress, experience, pre-existing group cohesion, and structural context of the student groups. This level of variability by school suggests the need for adaptability in this role to best fit the needs of student groups. Despite this variability, all schools demonstrated benefits from SIA coaches according to feedback from advisors and students, cultivating an atmosphere focused on project-based learning. Additionally, a city-wide service project is possible by helping form connections between our respective SIA groups and external resources, providing a new opportunity for all students to strengthen bonds between themselves and the greater community. We are continuing to research the degree of our roles’ utility and how it is nuanced within the individual schools.')">View Abstract</button>
+                <p class="citation">
+                    <strong>Zeri, H.</strong>, Nunan, L., Fawn, O., Gloyeske, N., et al. (2024). Connecting communities through 
+                    student-led service-learning approaches. <em>Local Development and Society, 5</em>(2), 298–313. 
+                    <a href="https://doi.org/10.1080/26883597.2024.2337701" target="_blank">https://doi.org/10.1080/26883597.2024.2337701</a>
+                </p>
+            </div>
         </div>
-        <div class="tab-content active" id="pub">
-            <h3 class="lab-name">Publication</h3>
-            <hr class="bottom-line">
-            <p><strong>Undergraduate Research Assistant</strong></p>
-            <p><em>January 2023 - Present</em></p>
-            <ul>
-                <li>Sample</li>
-            </ul>
+    </section>
+        <!-- Modal for Abstract -->
+        <div id="text-modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeTextModal()">&times;</span>
+                <div id="abstract-content" style="padding: 10px; font-size: 1rem; color: #333;"></div>
+            </div>
         </div>
-    </section> 
-<div id="exp-header">
+    </section>
+    
+
+<div id="research-header">
         <h3>Presentations</h3>
     </div>
     <section class="exp-section">
@@ -89,23 +87,59 @@
         <div class="tab-content active" id="posters">
             <h3 class="lab-name">Posters</h3>
             <hr class="bottom-line">
-            <p><strong>Undergraduate Research Assistant</strong></p>
-            <p><em>January 2023 - Present</em></p>
-            <ul>
-                <li>Sample</li>
-            </ul>
+            <p><strong>First Author Projects</strong></p>
+            <div class="research-grid">
+                <div class="research-card" onclick="openModal('INSAR Poster 2024 Haley Zeri.pdf')">
+                    <h3>Nonverbal and verbal scaffolding by caregivers of infants and toddlers with an elevated likelihood for autism during caregiver-child play</h3>
+                    <p><em>23rd International Society for Autism Research Annual Meeting, Melbourne, Australia</em></p>
+                </div>
+                <div class="research-card" onclick="openModal('NCUR Poster 2024 Haley Zeri.pdf')">
+                    <h3>Unlocking the potential of community-based services to promote holistic life outcomes for individuals with autism and developmental disabilities</h3>
+                    <p><em>National Conference on Undergraduate Research, Long Beach, CA</em></p>
+                </div>
+                <div class="research-card" onclick="openModal('LENA Poster Haley Zeri.pdf')">
+                    <h3>Predictive value of early joint attention for later absolute and relative language abilities in neurogenetic syndromes</h3>
+                    <p><em>2023 Purdue Autism Research Center Annual Conference, West Lafayette, IN</em></p>
+                </div>
+            </div>
+            <p><strong>Secondary Author Projects</strong></p>
+            <p>Neo, W. S., <strong>Zeri, H.,</strong> Estrada, K., Anthony, F., Kelleher, B., & Hamrick, L. (2024, May 15-18). <em>Prolonged object play during toddlerhood: A candidate behavioral marker of increased likelihood for autism spectrum disorder</em> [Poster presentation]. 23rd International Society for Autism Research Annual Meeting, Melbourne, Australia. </p>
+        </div>        
+    <!-- Modal for PDF -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+             <span class="close" onclick="closeModal()">&times;</span>
+            <iframe id="pdf-viewer" src="" width="100%" height="500px" style="border: none;"></iframe>
         </div>
+    </div>
     </section>
-<div class="tab-content" id="oralpres">
-    <h3 class="lab-name">Oral Presentations</h3>
-    <hr class="bottom-line">
-    <p><strong>Manuscript Title</strong></p>
-    <p><em>August 2022 - Present</em></p>
-    <ul>
-        <li>Sample</li>
-
-    </ul>
-</div>    
+    <div class="tab-content" id="oralpres">
+        <h3 class="lab-name">Oral Presentations</h3>
+        <hr class="bottom-line">
+        <p><strong>First Author Projects</strong></p>
+        <div class="research-grid">
+            <div class="research-card" onclick="openTextModal('Joint attention is a critical precursor skill for language acquisition in typical development. Despite prior research demonstrating that children with neurogenetic syndromes (NGS) have reduced joint attention and language skills, few studies have investigated how these abilities vary and are related to each other. In this study, we (a) characterized joint attention and language skills across Angelman (AS), Down (DS), and fragile X (FXS) syndromes; and (b) examined whether joint attention is predictive of later language skills. We hypothesized that joint attention and language skills are most developed in DS, followed by FXS, and least in AS. We also expected joint attention to be positively related to and predictive of language skills. To test these hypotheses, we assessed joint attention and language in 36 (53% male) children with NGS (AS: n = 8; DS: n = 19; FXS: n = 9) across two timepoints (MT1age = 16.5 months; MT2age = 26.3 months). Based on parent-prompted joint attention presses, participants were categorized as having no, some, or consistent joint attention skills. We also measured language ability using the LENA device (Gilkerson & Richards, 2020), a wearable recorder that automatically provides a standard score of child vocalization count. We tested hypotheses using chi-square and one-way ANOVA statistical tests. Our results partially supported our hypotheses: joint attention did not differ across NGS for both timepoints (ps > .09), though language skills were less developed in AS than DS and FXS (ps < .05). Contrary to expectations, concurrent joint attention and language skills were not significantly related at either timepoint (ps > .30). Additionally, early joint attention did not predict later language skills (p = .86). Broadly, our findings suggest that AS, DS, and FXS may have more distinct language skills rather than joint attention abilities. Given that early joint attention was not predictive of language skills in our sample of children with NGS, further research is warranted to better understand whether associations between joint attention and language may differ for NGS and other high- and low-risk groups. Future studies may explore other potential predictors and better means to measure language development in NGS.')">
+                <h3>Early joint attention and language development in neurogenetic syndromes</h3>
+                <p><em>33rd Butler Undergraduate Research Conference, Indianapolis, IN</em></p>
+            </div>
+            <div class="research-card" onclick="openTextModal('Our partnership with Multiplying Good and their Students in Action (SIA) program has presented the opportunity to engage in interdisciplinary research. As a group of coaches, we represent a variety of backgrounds and areas of study, from STEM to liberal arts connected through the Purdue Honors College. Our variety of perspectives has enhanced our framework through which other college students might engage in similar mentoring roles within their local communities across the country. Additionally, we plan to continue to partner with a university in Brazil looking to implement a similar program which we will explore further in future research.')">
+                <h3>“Students in Action”: College students’ experiences in facilitating middle and high school students’ community projects</h3>
+                <p><em>Purdue Undergraduate Research Conference, West Lafayette, IN</em></p>
+            </div>
+        </div>
+        <p><strong>Secondary Author Projects</strong></p>
+        <p>Kelleher, B., Estrada, K., <strong>Zeri, H. N.,</strong> Springer-Wheeler, D., Seidl, A., Hamrick, L., Neo, W. S., Harold, R., Galvez, K. O., & Foti, D. (2023, November 3). <em>PANDABox (Parent Administered Neurodevelopmental Assessment) for remote monitoring of high-risk children</em> [Oral presentation]. NIH Remote Neuropsychological Assessments in Research: Present and Future Needs.</p>
+        <p>Anthony, F. O., <strong>Zeri, H. N.,</strong>  Neo, W. S., & Kelleher, B. L. (2022, October 20). <em>Conducting telehealth assessments with PANDABox</em> [Conference demonstration]. ABC's of Remote Assessment: Advances in Biobehavioral and Clinical Health Assessments, West Lafayette, IN, United States.</p>
+    </div>
+    
+    <!-- Modal for Abstract -->
+    <div id="text-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTextModal()">&times;</span>
+            <div id="abstract-content" style="padding: 10px; font-size: 1rem; color: #333;"></div>
+        </div>
+    </div>
+    
 </main>
 
  <!-- Footer with Contact Information -->
@@ -130,5 +164,6 @@
     </div>
 </footer> 
 <script src="script.js"></script>
+
 </body>
 </html>
