@@ -666,38 +666,6 @@ color: #724b48;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
-    justify-content: center;
-    align-items: center;
-    z-index: 1000; /* Make sure it's above all other elements */
-}
-
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 5px;
-    width: 80%;
-    max-width: 800px;
-    position: relative;
-    z-index: 1010; /* Ensure modal content stays above modal background */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    cursor: pointer;
-    color: #555;
-}
 
 #abstract-content {
     font-family: "Montserrat", sans-serif;
@@ -871,6 +839,22 @@ color: #724b48;
     margin-bottom: 30px;
 }
 
+.grants-awards h3 {
+    font-size: 1.5em;
+    color: #724b48;
+    padding-bottom: 5px;
+    font-weight: bold;
+    background-color: #f4e4ec;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+
 /* Award Categories */
 .award-category {
     margin-bottom: 40px;
@@ -885,55 +869,66 @@ color: #724b48;
 /* Award Grid */
 .award-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+    margin-top: 20px;
 }
 
-/* Award Card */
 .award-card {
-    background-color: #f9f9f9;
     padding: 20px;
-    border: 1px solid #d6bdd3;
-    border-radius: 10px;
-    text-align: left;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #f4f4f4;
+    border: 1px solid #ccc;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 8px;
 }
 
 .award-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .award-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Smaller minimum size */
+    }
+}
+
+@media (max-width: 480px) {
+    .award-grid {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
 }
 
 /* Award Button */
 .award-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 12px;
+    margin: 15px 0; /* Add spacing above and below */
+    padding: 10px 15px;
     background-color: #724b48;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 0.9rem;
+    font-size: 1rem;
     cursor: pointer;
     text-align: center;
-    text-decoration: none;
     transition: background-color 0.3s ease;
+    font-family: "Alice", serif;
 }
 
 .award-button:hover {
     background-color: #ab97a9;
 }
 
-/* Modal */
+/* Modal Styles */
 .modal {
-    display: none;
+    display: none; /* Initially hidden */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -942,11 +937,29 @@ color: #724b48;
 .modal-content {
     background: white;
     padding: 20px;
-    border-radius: 5px;
-    width: 80%;
-    max-width: 600px;
+    border-radius: 10px;
+    width: 80%; /* Default width */
+    max-width: 600px; /* Limit max width */
+    max-height: 80vh; /* Limit height to fit screen */
+    overflow-y: auto; /* Enable scrolling if content overflows */
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#abstract-content {
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%; /* Use almost full width on smaller screens */
+        max-width: 100%; /* No fixed width */
+        max-height: 80vh; /* Fit within screen height */
+    }
 }
 
 .close {
@@ -956,4 +969,47 @@ color: #724b48;
     font-size: 24px;
     cursor: pointer;
     color: #555;
+}
+
+/* Research Grid */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column size */
+    gap: 20px; /* Space between cards */
+}
+
+.research-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .research-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Smaller minimum size */
+    }
+}
+
+@media (max-width: 480px) {
+    .research-grid {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+}
+
+.abstract-button {
+    padding: 10px 20px;
+    background-color: #724b48;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.abstract-button:hover {
+    background-color: #ab97a9;
 }

@@ -44,39 +44,52 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function openModal(pdfUrl) {
-    const modal = document.getElementById('modal');
+    console.log("PDF Modal triggered with URL: " + pdfUrl);
+    const modal = document.getElementById('pdf-modal');
     const viewer = document.getElementById('pdf-viewer');
     viewer.src = pdfUrl;
     modal.style.display = 'flex';
 }
 
 function closeModal() {
-    const modal = document.getElementById('modal');
+    console.log("Modal closed.");
+    const modal = document.getElementById('pdf-modal');
     const viewer = document.getElementById('pdf-viewer');
     modal.style.display = 'none';
-    viewer.src = ''; // Clear the iframe to stop loading the PDF
+    viewer.src = '';
 }
 
-// Close modal when clicking outside the content
-window.onclick = function (event) {
-    const modal = document.getElementById('modal');
-    if (event.target === modal) {
+window.addEventListener('click', function (event) {
+    const modal = document.getElementById('pdf-modal');
+    const modalContent = document.querySelector('.modal-content');
+
+    // Check if the clicked area is the modal but not its content
+    if (event.target === modal && !modalContent.contains(event.target)) {
         closeModal();
     }
-};
+});
 
 function openTextModal(abstractText) {
     const modal = document.getElementById('text-modal');
     const content = document.getElementById('abstract-content');
-    content.textContent = abstractText; // Set the abstract text dynamically
-    modal.style.display = 'flex'; // Show modal
+    content.textContent = abstractText; 
+    modal.style.display = 'flex'; 
 }
 
 function closeTextModal() {
     const modal = document.getElementById('text-modal');
-    modal.style.display = 'none'; // Hide modal
-    document.getElementById('abstract-content').textContent = ''; // Clear the content
+    modal.style.display = 'none'; 
+    document.getElementById('abstract-content').textContent = ''; 
 }
+
+window.addEventListener('click', function (event) {
+    const modal = document.getElementById('text-modal');
+    const modalContent = document.querySelector('.modal-content');
+    if (event.target === modal && !modalContent.contains(event.target)) {
+        closeTextModal();
+    }
+});
+
 
 document.querySelectorAll('.file-tab').forEach(tab => {
     tab.addEventListener('click', () => {
@@ -90,27 +103,5 @@ document.querySelectorAll('.file-tab').forEach(tab => {
         document.getElementById(folderId).classList.add('active');
     });
 });
-
-function openModal(fileUrl) {
-    const modal = document.getElementById('award-modal');
-    const viewer = document.getElementById('award-viewer');
-    viewer.src = fileUrl; // Set the file (PDF/Photo) dynamically
-    modal.style.display = 'flex'; // Show modal
-}
-
-function closeModal() {
-    const modal = document.getElementById('award-modal');
-    const viewer = document.getElementById('award-viewer');
-    modal.style.display = 'none'; // Hide modal
-    viewer.src = ''; // Clear the iframe to stop loading the file
-}
-
-// Close modal if clicking outside the content
-window.onclick = function(event) {
-    const modal = document.getElementById('award-modal');
-    if (event.target === modal) {
-        closeModal();
-    }
-};
 
 
