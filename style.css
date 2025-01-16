@@ -380,72 +380,6 @@ header {
     font-family: "Montserrat", sans-serif;
 }
 
-/* ==================== Contact Section ==================== */
-#contact-section {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    color: #724b48;
-    background-color: #d6bdd3;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.button:hover {
-    background-color: #ab97a9;
-}
-
-/* ==================== Footer ==================== */
-.footer-header {
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.footer-header h2 {
-    font-size: 1.5rem; /* Adjust font size */
-    color: #724b48; /* Match your theme color */
-    margin-bottom: 5px; /* Space below the heading */
-}
-
-.dots-line {
-    font-size: 1.2rem; /* Adjust size of dots */
-    color: #ab97a9; /* Slightly lighter color for dots */
-    letter-spacing: 5px; /* Space out the dots */
-    text-align: center;
-}
-
-.footer-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Space between icons */
-}
-
-.footer-icon .icon {
-    width: 40px; /* Size of the icons */
-    height: 40px;
-    object-fit: contain;
-    transition: transform 0.2s ease;
-}
-
-.footer-icon .icon:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
-    opacity: 0.8; /* Dim the icon slightly */
-}
-
-.icon {
-    width: 40px; /* Set the width of the icons */
-    height: 40px; /* Set the height of the icons */
-    object-fit: contain; /* Maintain aspect ratio */
-    margin: 5px; /* Add space around the icons */
-}
-
 
 /* Research page styling */
 #research-intro {
@@ -546,6 +480,7 @@ hr {
     margin: 40px auto 20px;
     height: 50px;
     padding-bottom: 5px;
+
 }
 
 #research-header {
@@ -575,9 +510,6 @@ hr {
     height: 50px !important;
     padding-bottom: 5px !important;
 }
-
-
-
 
 .exp-section {
     margin-top: 10px; /* Add spacing above the tab section */
@@ -800,6 +732,21 @@ color: #724b48;
     margin-top: 10px;
 }
 
+/* Research Grid */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column size */
+    gap: 20px; /* Space between cards */
+}
+
+.research-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
 
 .research-card:hover {
     transform: scale(1.05);
@@ -817,17 +764,35 @@ color: #724b48;
     color: #5a3b4d;
     line-height: 1.6;
 }
-/* Citation Styling */
-.citation {
-    font-size: 0.9rem;
-    color: #5a3b4d;
-    line-height: 1.6;
-    margin-top: 10px;
+
+@media (max-width: 768px) {
+    .research-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Smaller minimum size */
+    }
 }
 
+@media (max-width: 480px) {
+    .research-grid {
+        grid-template-columns: 1fr; /* Single column for very small screens */
+    }
+}
+
+.abstract-button {
+    padding: 10px 20px;
+    background-color: #724b48;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.abstract-button:hover {
+    background-color: #ab97a9;
+}
 
 /* Awards page styling */
-/* Section Styling */
 #grants-awards {
     padding: 20px;
 }
@@ -839,7 +804,7 @@ color: #724b48;
     margin-bottom: 30px;
 }
 
-.grants-awards h3 {
+#grants-awards-header {
     font-size: 1.5em;
     color: #724b48;
     padding-bottom: 5px;
@@ -852,6 +817,7 @@ color: #724b48;
     height: 50px;
     padding: 0 20px;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 
@@ -867,26 +833,42 @@ color: #724b48;
 }
 
 /* Award Grid */
+
 .award-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    
 }
 
+/* Card Design */
 .award-card {
+    background-color: #f9f9f9;
     padding: 20px;
-    background: #f4f4f4;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s;
-    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .award-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.award-card h3 {
+    font-size: 1.2rem;
+    color: #724b48;
+    margin-bottom: 10px;
+}
+
+.award-card p {
+    font-size: 1rem;
+    color: #5a3b4d;
+    line-height: 1.6;
 }
 
 @media (max-width: 768px) {
@@ -971,45 +953,69 @@ color: #724b48;
     color: #555;
 }
 
-/* Research Grid */
-.research-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column size */
-    gap: 20px; /* Space between cards */
+/* ==================== Contact Section ==================== */
+#contact-section {
+    text-align: center;
+    margin-top: 30px;
 }
 
-.research-card {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #724b48;
+    background-color: #d6bdd3;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #ab97a9;
+}
+
+/* ==================== Footer ==================== */
+.footer-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer-header h2 {
+    font-size: 1.5rem; /* Adjust font size */
+    color: #724b48; /* Match your theme color */
+    margin-bottom: 5px; /* Space below the heading */
+}
+
+.dots-line {
+    font-size: 1.2rem; /* Adjust size of dots */
+    color: #ab97a9; /* Slightly lighter color for dots */
+    letter-spacing: 5px; /* Space out the dots */
     text-align: center;
 }
 
-@media (max-width: 768px) {
-    .research-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Smaller minimum size */
-    }
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between icons */
 }
 
-@media (max-width: 480px) {
-    .research-grid {
-        grid-template-columns: 1fr; /* Single column for very small screens */
-    }
+.footer-icon .icon {
+    width: 40px; /* Size of the icons */
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
 }
 
-.abstract-button {
-    padding: 10px 20px;
-    background-color: #724b48;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.footer-icon .icon:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    opacity: 0.8; /* Dim the icon slightly */
 }
 
-.abstract-button:hover {
-    background-color: #ab97a9;
+.icon {
+    width: 40px; /* Set the width of the icons */
+    height: 40px; /* Set the height of the icons */
+    object-fit: contain; /* Maintain aspect ratio */
+    margin: 5px; /* Add space around the icons */
 }
+
