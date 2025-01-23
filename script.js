@@ -104,4 +104,51 @@ document.querySelectorAll('.file-tab').forEach(tab => {
     });
 });
 
+function openPhotoModal(photoSrc, captionText) {
+    document.getElementById("photo-viewer").src = photoSrc;
+    document.getElementById("photo-caption").textContent = captionText;
+    document.getElementById("photo-modal").style.display = "flex";
+}
+
+// Function to close modal
+function closePhotoModal() {
+    document.getElementById("photo-modal").style.display = "none";
+}
+
+// Function to close when clicking outside the content box
+function outsideClick(event) {
+    if (event.target.id === "photo-modal") {
+        closePhotoModal();
+    }
+}
+
+// Open PDF Modal with Caption and Clickable Link
+function openPdfModalCap(pdfSrc, captionText, captionLink) {
+    document.getElementById("pdf-viewer-cap").src = pdfSrc;
+
+    // Check if a link is provided
+    if (captionLink) {
+        document.getElementById("pdf-caption-cap").innerHTML = 
+            `${captionText} - <a href="${captionLink}" target="_blank" style="color: #724b48; text-decoration: underline;">Click here</a>`;
+    } else {
+        document.getElementById("pdf-caption-cap").textContent = captionText;
+    }
+
+    document.getElementById("pdf-modal-cap").style.display = "flex";
+}
+
+
+// Close PDF Modal with Caption using "X" button
+function closePdfModalCap() {
+    document.getElementById("pdf-modal-cap").style.display = "none";
+}
+
+// Close modal when clicking outside the content
+function outsideClick(event) {
+    if (event.target.classList.contains("modal")) {
+        closePdfModalCap();
+        closePhotoModal();
+    }
+}
+
 

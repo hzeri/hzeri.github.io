@@ -23,74 +23,132 @@
 
 <!-- Page Content -->
 <main id="awards-page">
-<section id="grants-awards">
-    <div class="grants-awards">
-    <div id="grants-awards-header">
-        <h3>Research Labs</h3>
-    </div>
-        <div class="award-grid">
-            <div class="award-card">
-                <h4>Purdue Office of Engagement Service Learning Grant</h4>
-                <p><em>March 2024 ($500)</em></p>
-                <button class="award-button" onclick="openModal('pdf-url.pdf')">View Details</button>
+    <div id="pink-header">
+        <section id="awards_pg">
+                <h3>Achievements</h3>
             </div>
-            <div class="award-card">
-                <h4>INSAR Student and Trainee Travel Award</h4>
-                <p><em>February 2024 ($500)</em></p>
-            </div>
-            <div class="award-card">
-                <h4>Honors College Creative Endeavors Scholarship</h4>
-                <p><em>December 2023 ($1,000)</em></p>
-                <button class="award-button" onclick="openModal('photo-url.jpg')">View Photo</button>
-            </div>
-        </div>
-    </div>
-    </section>
+            <section class="exp-section">
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="grants">Grants</button>
+                    <button class="tab-button" data-tab="awards">Awards</button>
+                    <button class="tab-button" data-tab="academic_sch">Academic Honors & Scholarships</button>
+                </div>
+                <div class="tab-content active" id="grants">
+                    <h3 class="lab-name">Grants</h3>
+                    <hr class="bottom-line">
+                    <p><strong>Research Grants</strong></p>
+                    <div class="research-grid">
+                        <div class="research-card">
+                            <h3>Creative Endeavors Scholarship ($1,000)</h3>
+                            <p><em>Purdue University John Martinson Honors College, December 2023</em></p>
+                            <button class="abstract-button" onclick="openPhotoModal('Honors Thesis Collage.jpg', 'Funded my indepedent honors thesis investigating caregiver perspectives of services for their children with developmental disabilites.')">View Photo</button>
+                        </div>
+                        <div class="research-card">
+                            <h3>Service Learning Grant ($500)</h3>
+                            <p><em>Purdue University Office of Engagement, March 2024</em></p>
+                            <button class="abstract-button" onclick="openPhotoModal('Oakland Open Mic Night.jpg', 'Funded an Open Mic Nght hosted by Oakland Academy Students in Action Team to raise money for Mental Health America and local addiction recovery organization.')">View Photo</button>
+                        </div>
+                        <div class="research-card">
+                            <h3>Service Learning Grant ($500)</h3>
+                            <p><em>Purdue University Office of Engagement, October 2023</em></p>
+                            <button class="abstract-button" onclick="openPhotoModal('Oakland Mental Health Night.jpg', 'Funded a Family Mental Health Night hosted by Oakland Academy Students in Action Team to raise awareness and provide resources.')">View Photo</button>
+                        </div>
+                    </div>
+                    <p><strong>Travel Grants</strong></p>
+                    <div class="research-grid">
+                        <div class="research-card">
+                            <h3>Professional Development Grant ($500)</h3>
+                            <p><em>Purdue University Office of Undergraduate Research, May 2024</em></p>
+                        </div>
+                        <div class="research-card">
+                            <h3>Student Travel Grant ($500)</h3>
+                            <p><em>Purdue Autism Research Center, April 2024</em></p>
+                        </div>
+                        <div class="research-card">
+                            <h3>Student and Trainee Travel Award ($500)</h3>
+                            <p><em>INSAR, February 2024</em></p>
+                        </div>
+                    </div>
+            
+                </div>        
+            <!-- Modal for PDF -->
+            <div id="pdf-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <iframe id="pdf-viewer" src="" width="100%" height="500px" style="border: none;"></iframe>
+                </div>
+            </div> 
 
-    <!-- Category: Awards and Recognitions -->
-    <section class="grants-awards">
-        <div id="grants-awards-header">
-            <h3>Research Labs</h3>
-        </div>
-        <div class="award-grid">
-            <div class="award-card">
-                <h4>Sleep Research Society Infographic Contest</h4>
-                <p><em>May 2024 (First Place)</em></p>
+            <!-- PDF Modal with caption -->
+            <div id="pdf-modal-cap" class="modal" onclick="outsideClick(event)">
+                <div class="modal-content" onclick="event.stopPropagation();">
+                    <span class="close" onclick="closePdfModalCap()">&times;</span>
+                    <iframe id="pdf-viewer-cap" src="" width="100%" height="500px" style="border: none;"></iframe>
+                    <p id="pdf-caption-cap" style="text-align: center; font-size: 1rem; color: #333; margin-top: 10px;"></p>
+                </div>
             </div>
-            <div class="award-card">
-                <h4>Poster Award - Purdue Psychological Sciences Conference</h4>
-                <p><em>April 2023 (Honorable Mention, $200)</em></p>
-            </div>
-        </div>
-    </div>
-    </section>
 
-    <!-- Category: Scholarships -->
-    <section class="grants-awards">
-        <div id="grants-awards-header">
-            <h3>Research Labs</h3>
-        </div>
-        <div class="award-grid">
-            <div class="award-card">
-                <h4>Big Move Short Term Scholarship</h4>
-                <p><em>May 2022 ($3,000)</em></p>
+    
+            <div class="tab-content" id="awards">
+                <h3 class="lab-name">Awards</h3>
+                <hr class="bottom-line">
+                <p><strong>Header</strong></p>
+                <div class="research-grid">
+                    <div class="research-card">
+                        <h3>Sleep Research Society 2024 Infographic Contest</h3>
+                        <p><em>First place, May 2024</em></p>
+                        <button class=abstract-button onclick="openPdfModalCap('SRS Infographic Haley Zeri.pdf', 'View it online', 'https://hhs.purdue.edu/sleep/2024/05/14/2024-sleep-research-society-infographic-contest-winner/')">View Infographic</button>
+                    </div>
+                    <div class="research-card">
+                        <h3>Poster Award (Honorable Mention, $200)</h3>
+                        <p><em>Purdue Psychological Sciences Conference, April 2023</em></p>
+                        <button class=abstract-button onclick="openModal('LENA Poster Haley Zeri.pdf')">View Poster</button>
+                    </div>
+                </div>
             </div>
-            <div class="award-card">
-                <h4>Kiwanis Evening Club Scholarship</h4>
-                <p><em>May 2021 ($3,000)</em></p>
+        
+            <div class="tab-content" id="academic_sch">
+                <h3 class="lab-name">Academic Honors & Scholarships</h3>
+                <hr class="bottom-line">
+                <p><strong>Header</strong></p>
+                <div class="research-grid">
+                    <div class="research-card">
+                        <h3>Dean’s List</h3>
+                        <p><em>3.5 cumulative GPA, 3.0 current semester GPA</em></p>
+                    </div>
+                    <div class="research-card">
+                        <h3>Semester Honors</h3>
+                        <p><em>3.5 current semester GPA, 2.0 cumulative GPA</em></p>
+                    </div>
+                    <div class="research-card">
+                        <h3>Big Move Short Term Scholarship ($3,000)</h3>
+                        <p><em>Purdue Study Abroad Office, May 2023</em></p>
+                    </div>
+                </div>
+            </div> 
+                
+        </section>
+            
+            <!-- Modal for Abstract -->
+            <div id="text-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeTextModal()">&times;</span>
+                    <div id="abstract-content" style="padding: 10px; font-size: 1rem; color: #333;"></div>
+                    <iframe id="abstract-viewer" src="" width="100%" height="500px" style="border: none;"></iframe>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
 
-    <!-- Modal for Photos or PDFs -->
-    <div id="award-modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <iframe id="award-viewer" src="" width="100%" height="500px" style="border: none;"></iframe>
+        <!-- Photo Modal -->
+        <div id="photo-modal" class="modal" onclick="outsideClick(event)">
+            <div class="modal-content" onclick="event.stopPropagation();">
+                <span class="close" onclick="closePhotoModal()">&times;</span>
+                <img id="photo-viewer" src="" alt="Award Photo" style="width:100%; border-radius: 10px;">
+                <p id="photo-caption" style="text-align: center; font-size: 1rem; color: #333; margin-top: 10px;"></p>
+            </div>
         </div>
-    </div>
-</section>
+
+
+            
 </main>
 
  <!-- Footer with Contact Information -->
