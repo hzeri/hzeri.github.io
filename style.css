@@ -512,22 +512,22 @@ hr {
 }
 
 .exp-section {
-    margin-top: 10px; /* Add spacing above the tab section */
+    margin-top: 10px; 
 }
 
 .tabs {
     display: flex;
     gap: 10px;
     justify-content: center;
-    margin-bottom: 20px; /* Spacing below the tabs */
+    margin-bottom: 20px; 
 }
 
 .tab-content {
     display: none;
-    padding: 20px; /* Inner padding */
+    padding: 20px; 
     background-color: #f9f9f9;
     border-radius: 8px;
-    margin-top: 10px; /* Spacing between tabs and tab content */
+    margin-top: 10px; 
 }
 
 .tab-content.active {
