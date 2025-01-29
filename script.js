@@ -26,6 +26,23 @@ tabs.forEach(tab => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the current URL parameters
+    const params = new URLSearchParams(window.location.search);
+    
+    // Get the 'tab' parameter value (if exists)
+    const activeTab = params.get("tab");
+
+    if (activeTab) {
+        // Find the tab button and click it to activate
+        const tabButton = document.querySelector(`[data-tab="${activeTab}"]`);
+        if (tabButton) {
+            tabButton.click(); // Simulate a click to activate the tab
+        }
+    }
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const urlParams = new URLSearchParams(window.location.search);
     const tabParam = urlParams.get('tab');
