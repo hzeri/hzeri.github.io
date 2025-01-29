@@ -7,6 +7,7 @@ function toggleDropdown(sectionId) {
     }
 }
 
+
 document.querySelectorAll(".experience-header").forEach(header => {
     header.addEventListener("click", () => {
         const card = header.parentElement;
@@ -27,38 +28,23 @@ tabs.forEach(tab => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Get the current URL parameters
     const params = new URLSearchParams(window.location.search);
-    
-    // Get the 'tab' parameter value (if exists)
     const activeTab = params.get("tab");
 
     if (activeTab) {
-        // Find the tab button and click it to activate
-        const tabButton = document.querySelector(`[data-tab="${activeTab}"]`);
-        if (tabButton) {
-            tabButton.click(); // Simulate a click to activate the tab
-        }
-    }
-});
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const tabParam = urlParams.get('tab');
-
-    if (tabParam) {
-        const tabButton = document.querySelector(`.tab-button[data-tab="${tabParam}"]`);
-        const tabContent = document.querySelector(`#${tabParam}`);
+        const tabButton = document.querySelector(`.tab-button[data-tab="${activeTab}"]`);
+        const tabContent = document.getElementById(activeTab);
 
         if (tabButton && tabContent) {
-            document.querySelectorAll('.tab-button').forEach(button => button.classList.remove('active'));
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
             tabButton.classList.add('active');
             tabContent.classList.add('active');
         }
     }
 });
+
 
 function openModal(pdfUrl) {
     console.log("PDF Modal triggered with URL: " + pdfUrl);
@@ -76,15 +62,15 @@ function closeModal() {
     viewer.src = '';
 }
 
-window.addEventListener('click', function (event) {
-    const modal = document.getElementById('pdf-modal');
-    const modalContent = document.querySelector('.modal-content');
 
-    // Check if the clicked area is the modal but not its content
-    if (event.target === modal && !modalContent.contains(event.target)) {
+window.addEventListener('click', function (event) {
+    if (event.target.classList.contains("modal")) {
+        closePdfModalCap();
+        closePhotoModal();
         closeModal();
     }
 });
+
 
 function openTextModal(abstractText) {
     const modal = document.getElementById('text-modal');
@@ -99,27 +85,16 @@ function closeTextModal() {
     document.getElementById('abstract-content').textContent = ''; 
 }
 
-window.addEventListener('click', function (event) {
-    const modal = document.getElementById('text-modal');
-    const modalContent = document.querySelector('.modal-content');
-    if (event.target === modal && !modalContent.contains(event.target)) {
-        closeTextModal();
-    }
-});
-
-
 document.querySelectorAll('.file-tab').forEach(tab => {
     tab.addEventListener('click', () => {
-        // Remove 'active' class from all tabs and contents
         document.querySelectorAll('.file-tab').forEach(t => t.classList.remove('active'));
         document.querySelectorAll('.folder-content').forEach(content => content.classList.remove('active'));
 
-        // Add 'active' class to clicked tab and corresponding content
         tab.classList.add('active');
-        const folderId = tab.getAttribute('data-folder');
-        document.getElementById(folderId).classList.add('active');
+        document.getElementById(tab.getAttribute('data-folder')).classList.add('active');
     });
 });
+
 
 function openPhotoModal(photoSrc, captionText) {
     document.getElementById("photo-viewer").src = photoSrc;
@@ -139,21 +114,19 @@ function outsideClick(event) {
     }
 }
 
-// Open PDF Modal with Caption and Clickable Link
+
 function openPdfModalCap(pdfSrc, captionText, captionLink) {
     document.getElementById("pdf-viewer-cap").src = pdfSrc;
-
-    // Check if a link is provided
+    
+    const caption = document.getElementById("pdf-caption-cap");
     if (captionLink) {
-        document.getElementById("pdf-caption-cap").innerHTML = 
-            `${captionText} - <a href="${captionLink}" target="_blank" style="color: #724b48; text-decoration: underline;">Click here</a>`;
+        caption.innerHTML = `${captionText} - <a href="${captionLink}" target="_blank" style="color: #724b48; text-decoration: underline;">Click here</a>`;
     } else {
-        document.getElementById("pdf-caption-cap").textContent = captionText;
+        caption.textContent = captionText;
     }
 
     document.getElementById("pdf-modal-cap").style.display = "flex";
 }
-
 
 // Close PDF Modal with Caption using "X" button
 function closePdfModalCap() {
