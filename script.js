@@ -14,36 +14,6 @@ document.querySelectorAll(".experience-header").forEach(header => {
         card.classList.toggle("open");
     });
 });
-const tabs = document.querySelectorAll(".tab-button");
-const contents = document.querySelectorAll(".tab-content");
-
-tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-        tabs.forEach(t => t.classList.remove("active"));
-        contents.forEach(content => content.classList.remove("active"));
-
-        tab.classList.add("active");
-        document.getElementById(tab.dataset.tab).classList.add("active");
-    });
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const params = new URLSearchParams(window.location.search);
-    const activeTab = params.get("tab");
-
-    if (activeTab) {
-        const tabButton = document.querySelector(`.tab-button[data-tab="${activeTab}"]`);
-        const tabContent = document.getElementById(activeTab);
-
-        if (tabButton && tabContent) {
-            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
-
-            tabButton.classList.add('active');
-            tabContent.classList.add('active');
-        }
-    }
-});
 
 
 function openModal(pdfUrl) {
@@ -61,6 +31,50 @@ function closeModal() {
     modal.style.display = 'none';
     viewer.src = '';
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("JavaScript is running!");
+
+    const tabs = document.querySelectorAll(".tab-button");
+    const contents = document.querySelectorAll(".tab-content");
+
+    if (tabs.length === 0 || contents.length === 0) {
+        console.error("No tabs or contents found.");
+        return;
+    }
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", function () {
+            console.log(`Tab clicked: ${tab.dataset.tab}`);
+
+            // Remove active class from all tabs and contents
+            tabs.forEach(t => t.classList.remove("active"));
+            contents.forEach(content => content.classList.remove("active"));
+
+            // Activate clicked tab and its content
+            tab.classList.add("active");
+            const activeContent = document.getElementById(tab.dataset.tab);
+            if (activeContent) {
+                activeContent.classList.add("active");
+            } else {
+                console.error(`No content found for tab: ${tab.dataset.tab}`);
+            }
+        });
+    });
+
+    // Auto-activate tab from URL
+    const params = new URLSearchParams(window.location.search);
+    const activeTab = params.get("tab");
+    if (activeTab) {
+        const tabButton = document.querySelector(`[data-tab="${activeTab}"]`);
+        if (tabButton) {
+            tabButton.click();
+        } else {
+            console.error(`No tab found with data-tab="${activeTab}"`);
+        }
+    }
+});
+
 
 
 window.addEventListener('click', function (event) {
