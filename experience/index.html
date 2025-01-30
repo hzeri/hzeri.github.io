@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alice&family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
+    <script src="/script.js"></script>
 </head>
 
 
@@ -25,19 +26,16 @@
 
 <body>
     <main id="experience-page">
-        <div id="exp-header">
-            <h3>Research Labs</h3>
-        </div>
-        <section class="exp-section">
+        <!--Lab experiences-->
+        <section id="res-exp">
+            <h1>Research Labs</h1>
             <div class="tabs">
                 <button class="tab-button active" data-tab="sleeplab">Sleep & Developmental Studies Lab</button>
                 <button class="tab-button" data-tab="TREKSlab">TREKS Research Generator</button>
                 <button class="tab-button" data-tab="neurolab">Neurodevelopmental Family Lab</button>
             </div>
-        
-            <!-- Fixed tab-content structure -->
             <div class="tab-content active" id="sleeplab">
-                <h3 class="lab-name">Sleep & Developmental Studies Lab - Dr. A.J. Schwichtenberg</h3>
+                <h3 class="tab-name">Sleep & Developmental Studies Lab - Dr. A.J. Schwichtenberg</h3>
                 <hr class="bottom-line">
                 <p><strong>Undergraduate Research Assistant</strong></p>
                 <p><em>January 2023 - Present</em></p>
@@ -50,24 +48,24 @@
                     <li>Conducted extensive literature reviews on the use of eye-tracking technology in family daily routines.</li>
                     <li>Designed and created infographics to effectively disseminate research on healthy sleep habits.</li>
                 </ul>
-                <div class="exp-card-container">
-                    <div class="exp-card">
-                        <img src="4skill.png" alt="skill rating" class="skill-icon">
-                        <h4>Data Visualization & Analysis</h4>
-                    </div>
-                    <div class="exp-card">
-                        <img src="5skill.png" alt="skill rating" class="skill-icon">
-                        <h4>R Coding Language & SPSS</h4>
-                    </div>
-                    <div class="exp-card">
-                        <img src="5skill.png" alt="skill rating" class="skill-icon">
-                        <h4>Team Work & Management</h4>
-                    </div>
+            <div class="exp-skill-card-container">
+                <div class="exp-skill-card">
+                    <img src="/home_images/4skill.png" alt="skill rating" class="skill-icon">
+                    <h4>Data Visualization & Analysis</h4>
+                </div>
+                <div class="exp-skill-card">
+                    <img src="/home_images/5skill.png" alt="skill rating" class="skill-icon">
+                    <h4>R Coding Language & SPSS</h4>
+                </div>
+                <div class="exp-skill-card">
+                    <img src="/home_images/5skill.png" alt="skill rating" class="skill-icon">
+                    <h4>Team Work & Management</h4>
+                </div>
                 </div>
             </div>
         
             <div class="tab-content" id="TREKSlab">
-                <h3 class="lab-name">Students in Action Project - Dr. Jason Ware</h3>
+                <h3 class="tab-name">Students in Action Project - Dr. Jason Ware</h3>
                 <hr class="bottom-line">
                 <p><strong>Undergraduate Research Assistant and SIA Mentor</strong></p>
                 <p><em>August 2022 - Present</em></p>
@@ -79,24 +77,24 @@
                     <li>Conducted in-depth field research on coaching experiences, student attributes, and school characteristics, and analyzed qualitative data to identify best practices.</li>
                     <li>Fostered collaboration between Students in Action groups and city government for a city-wide youth well-being project.</li>
                 </ul>
-                <div class="exp-card-container">
-                    <div class="exp-card">
-                        <img src="5skill.png" alt="skill rating" class="skill-icon">
-                        <h4>Dissemenation</h4>
-                    </div>
-                    <div class="exp-card">
-                        <img src="5skill.png" alt="skill rating" class="skill-icon">
-                        <h4>Team Work & Management</h4>
-                    </div>
-                    <div class="exp-card">
-                        <img src="5skill.png" alt="skill rating" class="skill-icon">
-                        <h4>Mentorship</h4>
-                    </div>
+            <div class="exp-skill-card-container">
+                <div class="exp-skill-card">
+                    <img src="/home_images/5skill.png" alt="skill rating" class="skill-icon">
+                    <h4>Dissemenation</h4>
                 </div>
+                <div class="exp-skill-card">
+                    <img src="/home_images/5skill.png" alt="skill rating" class="skill-icon">
+                    <h4>Team Work & Management</h4>
+                </div>
+                <div class="exp-skill-card">
+                    <img src="/home_images/5skill.png" alt="skill rating" class="skill-icon">
+                    <h4>Mentorship</h4>
+                </div>
+            </div>
             </div>
         
             <div class="tab-content" id="neurolab">
-                <h3 class="lab-name">Neurodevelopmental Family Lab - Dr. Bridgette Kelleher</h3>
+                <h3 class="tab-name">Neurodevelopmental Family Lab - Dr. Bridgette Kelleher</h3>
                 <hr class="bottom-line">
                 <p><strong>Undergraduate Research Assistant</strong></p>
                 <p><em>January 2022 - May 2024</em></p>
@@ -109,182 +107,174 @@
                     <li>Contributed to the development of a coding scheme for child engagement states during play interactions.</li>
                 </ul>
                 <p><strong>Lead Undergraduate Research Assistant</strong></p>
-            <p><em>August 2022 - May 2023</em></p>
-            <ul>
-                <li>Facilitated communication between lab leadership and 30 undergraduate research assistants.</li>
-                <li>Planned and organized professional development and team-building activities for the lab.</li>
-            </ul>
-            <div class="exp-card-container">
-                <div class="exp-card">
-                    <img src="4skill.png" alt="skill rating" class="skill-icon">
-                    <h4>Project Management</h4>
+                <p><em>August 2022 - May 2023</em></p>
+                <ul>
+                    <li>Facilitated communication between lab leadership and 30 undergraduate research assistants.</li>
+                    <li>Planned and organized professional development and team-building activities for the lab.</li>
+                </ul>
+                <div class="exp-skill-card-container">
+                    <div class="exp-skill-card">
+                        <img src="/home_images/4skill.png" alt="skill rating" class="skill-icon">
+                        <h4>Project Management</h4>
+                    </div>
+                    <div class="exp-skill-card">
+                        <img src="/home_images/4skill.png" alt="skill rating" class="skill-icon">
+                        <h4>Data Visualization & Analysis</h4>
+                    </div>
+                    <div class="exp-skill-card">
+                        <img src="/home_images/5skill.png" alt="skill rating" class="skill-icon">
+                        <h4>Dissemenation</h4>
+                    </div>
                 </div>
-                <div class="exp-card">
-                    <img src="4skill.png" alt="skill rating" class="skill-icon">
-                    <h4>Data Visualization & Analysis</h4>
+            </div>
+        </section>
+        <!--Clinical experience-->
+        <section id="clin-exp">
+            <h1>Clinical Experiences</h1>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="grantshouse">Grant's House</button>
+                <button class="tab-button" data-tab="andy">Camp ANDY</button>
+            </div>
+            <div class="tab-content active" id="grantshouse">
+                <h3 class="tab-name">Grant's House</h3>
+                <hr class="bottom-line">
+                <p><strong>Direct Support Professional</strong></p>
+                <p><em>November 2022 - Present</em></p>
+                <ul>
+                    <li>Provided personalized care for children and adolescents with intellectual and developmental disabilities, including ASD, Down syndrome, and cerebral palsy.</li>
+                    <li>Engaged in developmentally sensitive communication methods, including ASL and nonverbal strategies, tailored to individual needs.</li>
+                    <li>Planned activities to promote independent daily living skills, monitored progress towards daily goals, and collaborated with multidisciplinary care teams.</li>
+                    <li>Primarily work with children require one-on-one support to provide necessary behavioral or communication support.</li>
+                </ul>
+            <div class="exp-skill-card-container">
+                <div class="exp-skill-card">
+                    <img src="/home_images/4skill.png" alt="skill rating" class="skill-icon">
+                    <h4>Skill 1</h4>
                 </div>
-                <div class="exp-card">
-                    <img src="5skill.png" alt="skill rating" class="skill-icon">
-                    <h4>Dissemenation</h4>
+                <div class="exp-skill-card">
+                    <img src="/home_images/4skill.png" alt="skill rating" class="skill-icon">
+                    <h4>Skill 2</h4>
+                </div>
+                <div class="exp-skill-card">
+                    <img src="/home_images/5skill.png" alt="skill rating" class="skill-icon">
+                    <h4>Skill 3</h4>
+                </div>
+            </div>
+            </div>
+    
+            <div class="tab-content" id="andy">
+                <h3 class="tab-name">Camp ANDY</h3>
+                <hr class="bottom-line">
+                <p><strong>Camp Counselor</strong></p>
+                <p><em>June 2024 - August 2024</em></p>
+                <ul>
+                    <li>Implemented an intensive, evidence-based summer program designed by William E. Pelham, Jr., Ph.D. to help children with ASD and ADHD build social skills, emotional regulation, and prosocial behaviors through recreational activities and social skills lessons.</li>
+                    <li>Collected clinical data on camper behaviors, providing in-vivo feedback using a token economy system, and evaluated program outcomes through quality of life and social connections measures.</li>  
+                    <li>Developed individualized daily goals to promote prosocial behaviors, collaborated with caregivers to implement at-home rewards, and provided tools to help campers meet these goals.</li>
+                    <li>Conducted research evaluating childrens' sense of belonging in and friendships in the program.</li>
+                </ul>
+            <div class="exp-skill-card-container">
+                <div class="exp-skill-card">
+                    <img src="/home_images/4skill.png" alt="skill rating" class="skill-icon">
+                    <h4>Skill 1</h4>
+                </div>
+                <div class="exp-skill-card">
+                    <img src="/home_images/4skill.png" alt="skill rating" class="skill-icon">
+                    <h4>Skill 2</h4>
+                </div>
+                <div class="exp-skill-card">
+                    <img src="/home_images/5skill.png" alt="skill rating" class="skill-icon">
+                    <h4>Skill 3</h4>
                 </div>
             </div>
             </div>
         </section>
-        
-    <div id="exp-header">
-        <h3>Clinical Experiences</h3>
-    </div>
-    <section class="exp-section">
-        <div class="tabs">
-            <button class="tab-button active" data-tab="grantshouse">Grant's House</button>
-            <button class="tab-button" data-tab="andy">Camp ANDY</button>
-        </div>
-    
-        <div class="tab-content active" id="grantshouse">
-            <h3 class="lab-name">Grant's House</h3>
-            <hr class="bottom-line">
-            <p><strong>Direct Support Professional</strong></p>
-            <p><em>November 2022 - Present</em></p>
-            <ul>
-                <li>Provided personalized care for children and adolescents with intellectual and developmental disabilities, including ASD, Down syndrome, and cerebral palsy.</li>
-                <li>Engaged in developmentally sensitive communication methods, including ASL and nonverbal strategies, tailored to individual needs.</li>
-                <li>Planned activities to promote independent daily living skills, monitored progress towards daily goals, and collaborated with multidisciplinary care teams.</li>
-                <li>Primarily work with children require one-on-one support to provide necessary behavioral or communication support.</li>
-            </ul>
-            <div class="exp-card-container">
-                <div class="exp-card">
-                    <img src="4skill.png" alt="skill rating" class="skill-icon">
-                    <h4>Skill 1</h4>
+        <!--Other experiences-->
+        <section id="other-exp">
+            <h1>Other Experiences</h1>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="bsb">Boilers Supporting Boilers</button>
+                <button class="tab-button" data-tab="profaff">Professional Affliations</button>
+                <button class="tab-button" data-tab="mentor">Honors Mentor</button>
+            </div>
+
+            <div class="tab-content active" id="bsb">
+                <h3 class="tab-name">Boilers Supporting Boilers</h3>
+                <hr class="bottom-line">
+                <p><strong>President</strong></p>
+                <p><em>May 2024 - Present</em></p>
+                <ul>
+                    <li>Lead the Board of Directors by delegating responsibilities and ensuring accountability, while maintaining relationships with other student organizations to enhance campus outreach.
+                    <li>Develop strategic plans to increase membership to 300 students, including by hosting two campus-wide events per month.</li> 
+                    <li>Implement new branding to reflect our peer-focused initative and take media interviews to promote our student organization.</li>
+                    <li>Represent the board to university administration and faculty, and manage grants and budgets  (~$15,000)  for events and organizational costs, such as event supplies.</li>
+                        
+                </ul>
+                <p><strong>Director of Training</strong></p>
+                <p><em>May 2023 - May 2024</em></p>
+                <ul>
+                    <li>Designed and facilitated training for peer support group leaders on topics including Neurodiversity, Diversity, Equity, and Inclusion, Interpersonal Violence Disclosure, and Peer Facilitation.</li>
+                    <li>Partnered with campus organizations to offer training opportunities, such as naloxone administration, men’s mental health, eating disorders, and creation of inclusive spaces.</li>
+                    <li>Planned and coordinated campus-wide outreach events with multiple campus organizations to boost student involvement and advocate for mental health and wellness.</li>
+                </ul>
+                <p><strong>Peer Support Group Facilatator</strong></p>
+                    <p><em>January 2022 - May 2023</em></p>
+                    <ul>
+                        <li>Facilitated mental wellness support groups to foster a welcoming campus environment and enhance psychosocial well-being.</li>
+                        <li>Planned activities to encourage group discussions, provided individualized support through active listening, and directed students to mental health resources.</li>
+                        <li>Trained in Diversity, Equity, and Inclusion, Interpersonal Violence Disclosure, and Peer Facilitation.</li>
+                    </ul>
+            <div class="exp-skill-card-container">
+                <div class="exp-skill-card">
+                    <img src="/home_images/5skill.png" alt="skill rating" class="skill-icon">
+                    <h4>Leadership</h4>
                 </div>
-                <div class="exp-card">
-                    <img src="4skill.png" alt="skill rating" class="skill-icon">
-                    <h4>Skill 2</h4>
+                <div class="exp-skill-card">
+                    <img src="/home_images/5skill.png" alt="skill rating" class="skill-icon">
+                    <h4>Mentorship</h4>
                 </div>
-                <div class="exp-card">
-                    <img src="5skill.png" alt="skill rating" class="skill-icon">
-                    <h4>Skill 3</h4>
+                <div class="exp-skill-card">
+                    <img src="/home_images/4skill.png" alt="skill rating" class="skill-icon">
+                    <h4>Project Management</h4>
                 </div>
             </div>
-        </div>
-    
-        <div class="tab-content" id="andy">
-            <h3 class="lab-name">Camp ANDY</h3>
+            </div>
+
+            <div class="tab-content" id="profaff">
+                <h3 class="tab-name">Professional Affliations</h3>
+                <hr class="bottom-line">
+                    <p><strong>Phi Beta Kappa, Member</strong></p>
+                    <p><em>April 2024 - Present</em></p>
+                    <p><strong>APA, Undergraduate Student Member</strong></p>
+                    <p><em>November 2023 - Present</em></p>
+                    <p><strong>INSAR, Undergraduate Student Member</strong></p>
+                    <p><em>September 2023 - Present</em></p>
+                    <p><strong>Psi Chi, Undergraduate Student Member</strong></p>
+                    <p><em>August 2022 - Present</em></p>
+            </div>
+  
+            <div class="tab-content" id="mentor">
+            <h3 class="tab-name">Honors Mentor</h3>
             <hr class="bottom-line">
-            <p><strong>Camp Counselor</strong></p>
-            <p><em>June 2024 - August 2024</em></p>
-            <ul>
-                <li>Implemented an intensive, evidence-based summer program designed by William E. Pelham, Jr., Ph.D. to help children with ASD and ADHD build social skills, emotional regulation, and prosocial behaviors through recreational activities and social skills lessons.</li>
-                <li>Collected clinical data on camper behaviors, providing in-vivo feedback using a token economy system, and evaluated program outcomes through quality of life and social connections measures.</li>  
-                <li>Developed individualized daily goals to promote prosocial behaviors, collaborated with caregivers to implement at-home rewards, and provided tools to help campers meet these goals.</li>
-                <li>Conducted research evaluating childrens' sense of belonging in and friendships in the program.</li>
-            </ul>
-            <div class="exp-card-container">
-                <div class="exp-card">
-                    <img src="4skill.png" alt="skill rating" class="skill-icon">
-                    <h4>Skill 1</h4>
+            <p><strong>Honors Mentor, John Martinson Honors College</strong></p>
+            <p><em>August 2022 - October 2022</em></p>
+                <ul>
+                    <li>Mentored 10 first-year students enrolled in HONR 19901 course in the Honors College.</li>
+                    <li>Encouraged students to gain leadership, interpersonal, and problem-solving skills through collaborative project-based learning.</li>
+                    <li>Acclimated students to a rigorous college environment and the practical applications of Honors College principles, including fostering curiosity and engagement as scholars.</li>
+                </ul>
+            <div class="exp-skill-card-container">
+                <div class="exp-skill-card">
+                    <img src="/home_images/5skill.png" alt="skill rating" class="skill-icon">
+                    <h4>Team Work & Management</h4>
                 </div>
-                <div class="exp-card">
-                    <img src="4skill.png" alt="skill rating" class="skill-icon">
-                    <h4>Skill 2</h4>
-                </div>
-                <div class="exp-card">
-                    <img src="5skill.png" alt="skill rating" class="skill-icon">
-                    <h4>Skill 3</h4>
+                <div class="exp-skill-card">
+                    <img src="/home_images/4skill.png" alt="skill rating" class="skill-icon">
+                    <h4>Mentorship</h4>
                 </div>
             </div>
-        </div>
-    </section>
-    
-
-<div id="exp-header">
-    <h3>Other Experiences</h3>
-</div>
-<section class="exp-section">
-<div class="tabs">
-<button class="tab-button active" data-tab="bsb">Boilers Supporting Boilers</button>
-<button class="tab-button" data-tab="profaff">Professional Affliations</button>
-<button class="tab-button" data-tab="mentor">Honors Mentor</button>
-</div>
-
-<div class="tab-content active" id="bsb">
-<h3 class="lab-name">Boilers Supporting Boilers</h3>
-<hr class="bottom-line">
-<p><strong>President</strong></p>
-<p><em>May 2024 - Present</em></p>
-<ul>
-    <li>Lead the Board of Directors by delegating responsibilities and ensuring accountability, while maintaining relationships with other student organizations to enhance campus outreach.
-    <li>Develop strategic plans to increase membership to 300 students, including by hosting two campus-wide events per month.</li> 
-    <li>Implement new branding to reflect our peer-focused initative and take media interviews to promote our student organization.</li>
-    <li>Represent the board to university administration and faculty, and manage grants and budgets  (~$15,000)  for events and organizational costs, such as event supplies.</li>
-        
-</ul>
-<p><strong>Director of Training</strong></p>
-<p><em>May 2023 - May 2024</em></p>
-<ul>
-    <li>Designed and facilitated training for peer support group leaders on topics including Neurodiversity, Diversity, Equity, and Inclusion, Interpersonal Violence Disclosure, and Peer Facilitation.</li>
-    <li>Partnered with campus organizations to offer training opportunities, such as naloxone administration, men’s mental health, eating disorders, and creation of inclusive spaces.</li>
-    <li>Planned and coordinated campus-wide outreach events with multiple campus organizations to boost student involvement and advocate for mental health and wellness.</li>
-</ul>
-<p><strong>Peer Support Group Facilatator</strong></p>
-    <p><em>January 2022 - May 2023</em></p>
-    <ul>
-        <li>Facilitated mental wellness support groups to foster a welcoming campus environment and enhance psychosocial well-being.</li>
-        <li>Planned activities to encourage group discussions, provided individualized support through active listening, and directed students to mental health resources.</li>
-        <li>Trained in Diversity, Equity, and Inclusion, Interpersonal Violence Disclosure, and Peer Facilitation.</li>
-    </ul>
-<div class="exp-card-container">
-    <div class="exp-card">
-        <img src="5skill.png" alt="skill rating" class="skill-icon">
-        <h4>Leadership</h4>
-    </div>
-    <div class="exp-card">
-        <img src="5skill.png" alt="skill rating" class="skill-icon">
-        <h4>Mentorship</h4>
-    </div>
-    <div class="exp-card">
-        <img src="4skill.png" alt="skill rating" class="skill-icon">
-        <h4>Project Management</h4>
-    </div>
-</div>
-</div>
-
-<div class="tab-content" id="profaff">
-<h3 class="lab-name">Professional Affliations</h3>
-<hr class="bottom-line">
-<p><strong>Phi Beta Kappa, Member</strong></p>
-<p><em>April 2024 - Present</em></p>
-<p><strong>APA, Undergraduate Student Member</strong></p>
-<p><em>November 2023 - Present</em></p>
-<p><strong>INSAR, Undergraduate Student Member</strong></p>
-<p><em>September 2023 - Present</em></p>
-<p><strong>Psi Chi, Undergraduate Student Member</strong></p>
-<p><em>August 2022 - Present</em></p>
-</div>
-
-</div>    
-<div class="tab-content" id="mentor">
-    <h3 class="lab-name">Honors Mentor</h3>
-    <hr class="bottom-line">
-    <p><strong>Honors Mentor, John Martinson Honors College</strong></p>
-    <p><em>August 2022 - October 2022</em></p>
-    <ul>
-        <li>Mentored 10 first-year students enrolled in HONR 19901 course in the Honors College.</li>
-        <li>Encouraged students to gain leadership, interpersonal, and problem-solving skills through collaborative project-based learning.</li>
-        <li>Acclimated students to a rigorous college environment and the practical applications of Honors College principles, including fostering curiosity and engagement as scholars.</li>
-    </ul>
-    <div class="exp-card-container">
-        <div class="exp-card">
-            <img src="5skill.png" alt="skill rating" class="skill-icon">
-            <h4>Team Work & Management</h4>
-        </div>
-        <div class="exp-card">
-            <img src="4skill.png" alt="skill rating" class="skill-icon">
-            <h4>Mentorship</h4>
-        </div>
-    </div>
-</div>    
-</section>
-    <script src="/script.js"></script>
+            </div>    
+        </section>
 </main>
 <!-- Footer with Contact Information -->
 <footer>
@@ -296,16 +286,16 @@
         </div>
         <div class="footer-icons">
             <a href="mailto:haleyzeri@gmail.com" class="footer-icon" aria-label="Email">
-                <img src="mail (1).png" alt="Email" class="icon">
+                <img src="/footer/mail.png" alt="Email" class="icon">
             </a>
             <a href="https://www.linkedin.com/in/haleyzeri" class="footer-icon" aria-label="LinkedIn">
-                <img src="linkedin (1).png" alt="LinkedIn" class="icon">
+                <img src="/footer/linkedin.png" alt="LinkedIn" class="icon">
             </a>
-            <a href="Haley Zeri CV Website.pdf" download class="footer-icon" aria-label="Download CV">
-                <img src="CV (1).png" alt="Download CV" class="icon">
+            <a href="/footer/Haley Zeri CV Website.pdf" download class="footer-icon" aria-label="Download CV">
+                <img src="/footer/CV.png" alt="Download CV" class="icon">
             </a>
         </div>
     </div>
-</footer>
+  </footer>  
 </body>
 </html>

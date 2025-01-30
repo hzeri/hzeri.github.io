@@ -13,9 +13,30 @@ p {
     color: #724b48;
 }
 
-h1, h2 {
+h1 {
+    font-size: 1.5em;
     color: #724b48;
+    font-weight: bold;
+    background-color: #f4e4ec;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 20px;
+    height: 50px;
+    padding-bottom: 5px;
 }
+
+h2 {
+    color: #724b48;
+    font-size: 2.2em;
+}
+
+h3 {
+    color: #724b48;
+
+}
+
 
 body {
     font-family: "Alice", serif;
@@ -81,7 +102,7 @@ header {
 .navbar-links .contact-button:hover {
     background-color: #ab97a9;
 }
-/* ========================================= Index =========================================  */
+/* ========================================= Home page =========================================  */
 /* ==================== Top Section ==================== */
 #home-container {
     display: flex;
@@ -99,29 +120,28 @@ header {
 
 /* Profile Photo Styling */
 .profile-photo {
-    width: 250px; /* Set size of the image */
-    height: 250px; /* Maintain aspect ratio */
-    border-radius: 50%; /* Circle shape */
-    object-fit: cover; /* Keep proportions of the image */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animations */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    margin: 0 auto; /* Center the photo */
+    width: 250px; 
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    margin: 0 auto; 
 }
 
-/* Hover Effect */
 .profile-photo.interactive:hover {
-    transform: scale(1.1); /* Slight zoom effect */
-    box-shadow: 0 0 20px rgba(255, 182, 193, 0.8); /* Add a glowing effect */
+    transform: scale(1.1); 
+    box-shadow: 0 0 20px rgba(255, 182, 193, 0.8); 
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .profile-photo {
-        width: 200px; /* Adjust size for smaller screens */
+        width: 200px; 
         height: 200px;
     }
 }
 
+/* Intro styling */
 .info-column {
     flex: 1;
     padding-left: 20px;
@@ -143,37 +163,22 @@ header {
 }
 
 
-/* ==================== Link Sections ==================== */
-.link-section {
+/* ==================== Experience Overview on Home page ==================== */
+.exp-over {
     margin: 20px 0;
     text-align: left;
     margin-bottom: 60px;
 }
 
-.link-section:last-of-type {
+.exp-over:last-of-type {
     margin-bottom: 0;
 }
 
-.link-section h2 {
-    font-size: 1.5em;
-    color: #724b48;
-    padding-bottom: 5px;
-    font-weight: bold;
-    background-color: #f4e4ec;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 50px;
-    padding: 0 20px;
-    margin: 0 auto;
-}
-
-.link-section p {
+.exp-over p {
     margin: 10px 0;
 }
 
-.link-section .button {
+.exp-over .button {
     display: block;
     width: fit-content;
     margin: 10px auto;
@@ -185,11 +190,11 @@ header {
     text-align: center;
 }
 
-.link-section .button:hover {
+.exp-ove .button:hover {
     background-color: #ab97a9;
 }
 
-/* ==================== Cards ==================== */
+/* Cards */
 .section-intro {
     font-size: 1.3rem; 
     font-weight: 500; 
@@ -198,7 +203,7 @@ header {
     margin-bottom: 20px; 
 }
 
-.card-container {
+.home-card-container {
     display: flex;
     justify-content: space-between; 
     flex-wrap: wrap; 
@@ -206,7 +211,7 @@ header {
     margin: 20px; 
     }
 
-  .card {
+.home-card {
     flex: 1 1 calc(33.333% - 30px); 
     max-width: calc(33.333% - 30px); 
     background-color: #f8f1f4;
@@ -217,39 +222,31 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-  .card:hover {
+.home-card:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-  }  
+}  
   
-  .card h3 {
+.home-card h3 {
     font-size: 1.2rem;
     color: #5d2a57;
     font-family: 'Alice', serif;
     margin-bottom: 8px;
-  }
+}
 
-  .card h4 {
-    font-size: 14px; 
-    margin: 0; 
-    color: #5a3b4d;
-    white-space: nowrap; 
-    overflow: hidden; 
-    text-overflow: ellipsis; 
-  }
-  .card p {
+.home-card p {
     font-size: 1rem;
     color: #4b4b4b;
-  }
+}
   
-  .card-img {
+.home-card-img {
     width: 100px; 
     height: 100px;
     object-fit: contain;
     margin: 0 auto 10px; 
-  }
+}
   
-  .three-cards {
+.three-cards {
     display: flex; 
     justify-content: space-between; 
     gap: 20px; 
@@ -287,51 +284,37 @@ header {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
   
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     body {
-        max-width: 100%; /* Allow full width on small screens */
+        max-width: 100%; 
         width: 95%;
     }
 
     #home-container {
-        flex-direction: column; /* Stack content vertically */
+        flex-direction: column; 
         align-items: center;
     }
 
     .card-container {
-        justify-content: center; /* Keep cards centered on small screens */
-        gap: 20px; /* Adjust gap for smaller devices */
+        justify-content: center; 
+        gap: 20px; 
     }
 
     .card {
-        flex: 1 1 100%; /* Full width for smaller screens */
+        flex: 1 1 100%; 
         max-width: 100%;
     }
 }
 
-/* ==================== Skills section ==================== */
+/* ==================== Skills section on Home page ==================== */
 #skills-section {
     text-align: center;
-    #skills-section h2 {
-        font-size: 2rem;
-        color: #333;
-        margin-bottom: 10px; 
-        font-family: "Alice", serif;
-    }
-    
     .skills-intro {
         font-size: 1.2rem;
         color: #666;
         margin: 20px 0;
         font-family: "Montserrat", sans-serif;
     }    
-}
-
-#skills-section h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 10px; 
-    font-family: "Alice", serif;
 }
 
 .skills-container {
@@ -342,10 +325,10 @@ header {
 }
 
 .skill-card {
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Align items in a column */
-    justify-content: center; /* Center items vertically */
-    align-items: center; /* Center items horizontally */
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
     background-color: #fff;
     padding: 10px 15px;
     border-radius: 8px;
@@ -381,138 +364,36 @@ header {
 }
 
 
-/* Research page styling */
-#research-intro {
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-.dropdown {
-    margin: 20px 0;
-}
-
-.dropdown-button {
-    width: 100%;
-    padding: 15px;
-    text-align: left;
-    font-size: 1.2em;
-    background-color: #ffffff;
-    color: #333;
-    border: 1px solid #ddd;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.dropdown-button:hover {
-    background-color: #e0e0e5;
-}
-
-.dropdown-content {
-    display: none;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-top: none;
-    background-color: #f9f9fc;
-}
-
-.dropdown-content h2 {
-    margin-top: 0;
-}
-
+/* ========================================= Experience page =========================================  */
+/* ==================== Experience Formatting ==================== */
 hr {
     border: none;
     border-top: 1px solid #ddd;
     margin: 10px 0;
 }
 
-/* Experience page styling */
-#experience-page .exp-card-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); 
-    gap: 15px; 
-    margin-top: 20px;
-}
-
-#experience-page .exp-card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    text-align: center;
-    padding: 15px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-#experience-page .exp-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-#experience-page .exp-card h4 {
-    font-family: "Alice", serif;
-    font-size: 1.2em;
-    color: #724b48;
-    margin-bottom: 10px;
-}
-
-#experience-page .exp-card p {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
-    color: #5a3b4d;
-}
-
-@media (max-width: 768px) {
-    #experience-page .exp-card-container {
-        grid-template-columns: 1fr; 
-        gap: 10px;
-    }
-}
-
-#exp-header {
-    font-size: 1.5em;
-    color: #724b48;
-    font-weight: bold;
-    background-color: #f4e4ec;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px auto 20px;
-    height: 50px;
-    padding-bottom: 5px;
-
-}
-
-#research-header {
-    font-size: 1.5em;
-    color: #724b48;
-    font-weight: bold;
-    background-color: #f4e4ec;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 40px auto 20px;
-    height: 50px;
-    padding-bottom: 5px;
-}
-
-#pink-header {
-    font-size: 1.5em !important;
-    color: #724b48 !important;
-    font-weight: bold !important;
-    background-color: #f4e4ec !important;
-    border-radius: 8px !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    margin: 40px auto 20px !important;
-    height: 50px !important;
-    padding-bottom: 5px !important;
-}
-
 .exp-section {
     margin-top: 10px; 
+}
+.bottom-line {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+ul li {
+    color: #724b48; 
+    margin-bottom: 5px; 
+}
+/* ==================== Experience Tabs ==================== */
+.tab-name {
+    margin-bottom: 10px;
+    display: inline-block;
+    background-color: #f4e4ec;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: #724b48;
 }
 
 .tabs {
@@ -534,31 +415,6 @@ hr {
     display: block;
 }
 
-.lab-name {
-    margin-bottom: 10px;
-    display: inline-block;
-    background-color: #f4e4ec;
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-align: center;
-    color: #724b48;
-}
-
-.bottom-line {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin: 10px 0;
-}
-
-ul li {
-    color: #724b48; /* Change bullet point text to brown */
-    margin-bottom: 5px; /* Add spacing between list items */
-}
-
-.exp-section h3 {
-color: #724b48;
-}
-
 .tab-button {
     background-color: #d6bdd3;
     color: #724b48;
@@ -574,51 +430,48 @@ color: #724b48;
     background-color: #724b48;
     color: #fff;
 }
+/* ==================== Experience-skill cards ==================== */
 
-/* Publications page styling */
-.research-grid {
+#experience-page .exp-skill-card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px; 
     margin-top: 20px;
 }
 
-.research-card {
-    padding: 20px;
-    background: #f4f4f4;
-    border: 1px solid #ccc;
-    text-align: center;
-    cursor: pointer;
-    transition: transform 0.2s;
+#experience-page .exp-skill-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
     border-radius: 8px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.research-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+#experience-page .exp-skill-card h4 {
+    font-family: "Alice", serif;
+    font-size: 1.2em;
+    color: #724b48;
+    margin-bottom: 10px;
 }
 
-
-#abstract-content {
+#experience-page .exp-skill-card p {
     font-family: "Montserrat", sans-serif;
-    line-height: 1.6;
+    font-size: 1em;
+    color: #5a3b4d;
 }
 
-#oralpres .research-card h3 {
-    font-family: 'Alice', serif; 
-    font-size: 1.2rem; 
-    color: #724b48; 
-    text-align: center; 
+@media (max-width: 768px) {
+    #experience-page .exp-card-container {
+        grid-template-columns: 1fr; 
+        gap: 10px;
+    }
 }
 
-#posters .research-card h3 {
-    font-family: 'Alice', serif; 
-    font-size: 1.2rem; 
-    color: #724b48; 
-    text-align: center; 
-}
 
-/* File Folder Tabs */
+/* ========================================= Research page =========================================  */
+/* ==================== Research Independent projects File Folder ==================== */
 .file-folder-tabs {
     display: flex;
     border-bottom: 2px solid #d6bdd3;
@@ -636,14 +489,13 @@ color: #724b48;
     font-family: "Alice", serif;
     transition: background-color 0.3s ease;
 }
-
-.file-tab.active {
-    background-color: #724b48;
+.file-tab:hover {
+    background-color: #ab97a9;
     color: white;
 }
 
-.file-tab:hover {
-    background-color: #ab97a9;
+.file-tab.active {
+    background-color: #724b48;
     color: white;
 }
 
@@ -656,7 +508,6 @@ color: #724b48;
     margin-top: -1px; 
 }
 
-
 .folder-content.active {
     display: block;
 }
@@ -668,62 +519,46 @@ color: #724b48;
     font-style: normal;
     color: #724b48;
 }
+/* ==================== Research Cards ==================== */
 
-
-/* Publications Section */
-#publications {
-    margin-top: 40px;
-    text-align: center;
-}
-
-#publications .citation a {
-    text-decoration: underline; /* Add underline */
-    color: #724b48; /* Ensure consistent color */
-}
-
-#publications .citation a:hover {
-    color: #ab97a9; /* Optional: Change color on hover */
-    text-decoration: underline; /* Keep underline on hover */
-}
-
-
-#publications h2 {
-    color: #724b48;
-    font-family: "Alice", serif;
-    margin-bottom: 20px;
-}
-
-#publications h3 {
-    color: #724b48;
-    font-family: "Alice", serif;
-    margin-bottom: 20px;
-}
-
-/* Grid Layout */
 .research-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+    margin-top: 20px;
 }
 
-/* Card Design */
 .research-card {
     background-color: #f9f9f9;
     padding: 20px;
-    border: 1px solid #d6bdd3;
+    border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack content vertically */
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center; /* Center text */
+    text-align: center; 
 }
 
-/* Abstract Button */
+.research-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+#publications .citation a {
+    text-decoration: underline; 
+    color: #724b48; 
+}
+
+#publications .citation a:hover {
+    color: #ab97a9; 
+    text-decoration: underline; 
+}
+
 .abstract-button {
-    margin: 15px 0; /* Add spacing above and below */
+    margin: 15px 0; 
     padding: 10px 15px;
     background-color: #724b48;
     color: white;
@@ -740,83 +575,21 @@ color: #724b48;
     background-color: #ab97a9;
 }
 
-/* Citation Styling */
-.citation {
-    font-size: 0.9rem;
-    color: #5a3b4d;
-    line-height: 1.6;
-    margin-top: 10px;
-}
-
-/* Research Grid */
-.research-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column size */
-    gap: 20px; /* Space between cards */
-}
-
-.research-card {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.research-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
-}
-
-.research-card h3 {
-    font-size: 1.2rem;
-    color: #724b48;
-    margin-bottom: 10px;
-}
-
-.research-card p {
-    font-size: 1rem;
-    color: #5a3b4d;
-    line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-    .research-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Smaller minimum size */
-    }
-}
-
 @media (max-width: 480px) {
     .research-grid {
-        grid-template-columns: 1fr; /* Single column for very small screens */
+        grid-template-columns: 1fr;
     }
 }
 
-.abstract-button {
-    padding: 10px 20px;
-    background-color: #724b48;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.abstract-button:hover {
-    background-color: #ab97a9;
-}
-
-/* Modal Styles */
+/* ==================== Modal Formatting for Research Cards ==================== */
 .modal {
-    display: none; /* Initially hidden */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    background: rgba(0, 0, 0, 0.8); 
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -826,28 +599,26 @@ color: #724b48;
     background: white;
     padding: 20px;
     border-radius: 10px;
-    width: 80%; /* Default width */
-    max-width: 600px; /* Limit max width */
-    max-height: 80vh; /* Limit height to fit screen */
-    overflow-y: auto; /* Enable scrolling if content overflows */
+    width: 80%; 
+    max-width: 600px; 
+    max-height: 80vh; 
+    overflow-y: auto; 
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #abstract-content {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.6;
     padding: 10px;
     font-size: 1rem;
-    line-height: 1.5;
     color: #333;
     text-align: justify;
 }
 
-@media (max-width: 768px) {
-    .modal-content {
-        width: 95%; /* Use almost full width on smaller screens */
-        max-width: 100%; /* No fixed width */
-        max-height: 80vh; /* Fit within screen height */
-    }
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 .close {
@@ -859,12 +630,80 @@ color: #724b48;
     color: #555;
 }
 
-.modal-content img {
-    width: 100%;
-    border-radius: 10px;
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%; 
+        max-width: 100%; 
+        max-height: 80vh; 
+    }
 }
 
-/* PDF Modal with Caption */
+
+/* ========================================= Achievements page =========================================  */
+/* ==================== Achievement Cards ==================== */
+
+.ach-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.ach-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; 
+}
+
+.ach-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.ach-button {
+    margin: 15px 0; 
+    padding: 10px 15px;
+    background-color: #724b48;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    font-family: "Alice", serif;
+}
+
+.ach-button:hover {
+    background-color: #ab97a9;
+}
+
+.ach-card:has(.ach-button):hover {
+    transform: scale(1.05);
+}
+
+.ach-card:not(:has(.ach-button)):hover {
+    transform: none;
+    cursor: default;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+
+@media (max-width: 480px) {
+    .ach-grid {
+        grid-template-columns: 1fr; 
+    }
+}
+/* ==================== Modal Formatting for Achievement Cards ==================== */
+
 #pdf-modal-cap {
     display: none; 
     position: fixed;
@@ -872,33 +711,13 @@ color: #724b48;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Dark background */
+    background: rgba(0, 0, 0, 0.8); 
     justify-content: center;
     align-items: center;
     z-index: 1000;
     transition: opacity 0.3s ease;
 }
 
-/* Modal Content */
-#pdf-modal-cap .modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Caption Styling */
-#pdf-caption-cap {
-    text-align: center;
-    font-size: 1rem;
-    color: #333;
-    margin-top: 10px;
-}
-
-/* Close Button */
 #pdf-modal-cap .close {
     position: absolute;
     top: 10px;
@@ -978,4 +797,5 @@ color: #724b48;
     object-fit: contain; /* Maintain aspect ratio */
     margin: 5px; /* Add space around the icons */
 }
+
 
