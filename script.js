@@ -148,4 +148,33 @@ document.getElementById("text-modal").addEventListener("click", function (event)
     }
 });
 
-
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.skill-card');
+  
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+  
+        const filter = button.getAttribute('data-filter').toLowerCase();
+  
+        cards.forEach(card => {
+          const categories = card.getAttribute('data-category')
+            .toLowerCase()
+            .split(',')
+            .map(cat => cat.trim());
+  
+          if (filter === 'all' || categories.includes(filter)) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+  
+  
+  
+  
