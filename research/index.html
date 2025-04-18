@@ -35,6 +35,10 @@
         <div class="file-folder-tabs">
             <button class="file-tab active" data-folder="overview">Honors Thesis Project</button>
         </div>
+        <!-- Template: Add a new independent study tab -->
+        <!--
+        <button class="file-tab" data-folder="newfolderid">New Study Title</button>
+        -->
         <div class="folder-content active" id="overview">
             <p><strong>Unlocking the Potential: Community-Based Services</strong></p>
             
@@ -47,6 +51,18 @@
                 <li>I found that families value day habilitation service's family-centered approach and focus on building recreational skills, providing a unique and high-quality intervention experience.</li>
             </ul>
         </div>
+        <!-- Template: Add new folder content for independent study -->
+        <!--
+        <div class="folder-content" id="newfolderid">
+            <p><strong>Project Title</strong></p>
+            <hr class="bottom-line">
+            <p>Project Overview</p>
+            <ul>
+                <li>Description bullet 1</li>
+                <li>Description bullet 2</li>
+            </ul>
+        </div>
+        -->
     </section>    
     <section id="publications">
         <h1>Publications</h1>
@@ -62,6 +78,18 @@
                 </p>
             </div>
         </div>
+        <!-- Template: Add new publication card -->
+        <!--
+        <div class="research-card">
+            <h3>Publication Title</h3>
+            <p><em>Journal Name</em></p>
+            <button class="abstract-button" onclick="openTextModal('Abstract text goes here.')">View Abstract</button>
+            <p class="citation">
+                <strong>Author, H.</strong> (Year). Title. <em>Journal</em>, volume(issue), pages. 
+                <a href="https://doi.org/example" target="_blank">DOI Link</a>
+            </p>
+        </div>
+        -->
     </section>
         <!-- Modal for Abstract -->
         <div id="text-modal" class="modal">
@@ -86,6 +114,21 @@
             <p><strong>First Author Projects</strong></p>
             <div class="research-grid">
                 <div class="research-card">
+                    <h3>Caregivers' experience with family-centered service delivery across services in their community for individuals with autism and other developmental disabilities</h3>
+                    <p><em>24th International Society for Autism Research Annual Meeting, Seattle, Washington</em></p>
+                    <button class=abstract-button onclick="openModal('INSAR Poster 2025.pdf')">View Poster</button>
+                </div>
+                <div class="research-card">
+                    <h3>A Multi-Perspective Case Study on Implementing a Novel College Student Coach Role in a Service-Learning Club: Oakland Academy Students in Action Team</h3>
+                    <p><em>National Conference on Undergraduate Research, Pittsburg, PA</em></p>
+                    <button class=abstract-button onclick="openModal('NCUR 2025 Poster.pdf')">View Poster</button>
+                </div>
+                <div class="research-card">
+                    <h3>Students in Action: Fostering a K-12 School and University Partnership to Promote Community Engagement and Professional Development through Bi-Annual Conferences</h3>
+                    <p><em>National Conference on Undergraduate Research, Pittsburg, PA</em></p>
+                    <button class=abstract-button onclick="openModal('NCUR 2025 Group Poster.pdf')">View Poster</button>
+                </div>
+                <div class="research-card">
                     <h3>Nonverbal and verbal scaffolding by caregivers of infants and toddlers with an elevated likelihood for autism during caregiver-child play</h3>
                     <p><em>23rd International Society for Autism Research Annual Meeting, Melbourne, Australia</em></p>
                     <button class=abstract-button onclick="openModal('INSAR Poster 2024 Haley Zeri.pdf')">View Poster</button>
@@ -100,9 +143,18 @@
                     <p><em>2023 Purdue Autism Research Center Annual Conference, West Lafayette, IN</em></p>
                     <button class=abstract-button onclick="openModal('LENA Poster Haley Zeri.pdf')">View Poster</button>
                 </div>
+            <!-- Template: Add new poster card -->
+            <!--
+            <div class="research-card">
+                <h3>Poster Title</h3>
+                <p><em>Conference Name, Location</em></p>
+                <button class="abstract-button" onclick="openModal('posterfile.pdf')">View Poster</button>
+            </div>
+            -->
             </div>
             <p><strong>Secondary Author Projects</strong></p>
             <p>Neo, W. S., <strong>Zeri, H.,</strong> Estrada, K., Anthony, F., Kelleher, B., & Hamrick, L. (2024, May 15-18). <em>Prolonged object play during toddlerhood: A candidate behavioral marker of increased likelihood for autism spectrum disorder</em> [Poster presentation]. 23rd International Society for Autism Research Annual Meeting, Melbourne, Australia. </p>
+            <p>West, M., Bajorat, F., <strong>Zeri, H.,</strong> Schwichtenberg, A. J. (2025, April 4). A descriptive analysis of current research on sleep in AS and FXS populations. [Poster presentation]. Purdue Autism Research Center Conference, West Lafayette, IN, United States. </p>
         </div>        
     <!-- Modal for PDF -->
     <div id="pdf-modal" class="modal">
@@ -128,6 +180,14 @@
                 <p><em>Purdue Undergraduate Research Conference, West Lafayette, IN</em></p>
                 <button class="abstract-button" onclick="openTextModal('Our partnership with Multiplying Good and their Students in Action (SIA) program has presented the opportunity to engage in interdisciplinary research. As a group of coaches, we represent a variety of backgrounds and areas of study, from STEM to liberal arts connected through the Purdue Honors College. Our variety of perspectives has enhanced our framework through which other college students might engage in similar mentoring roles within their local communities across the country. Additionally, we plan to continue to partner with a university in Brazil looking to implement a similar program which we will explore further in future research.')">View Abstract</button>
             </div>
+            <!-- Template: Add new oral presentation card -->
+            <!--
+            <div class="research-card">
+                <h3>Oral Presentation Title</h3>
+                <p><em>Conference Name, Location</em></p>
+                <button class="abstract-button" onclick="openTextModal('Abstract text goes here.')">View Abstract</button>
+            </div>
+            -->
         </div>
         <p><strong>Secondary Author Projects</strong></p>
         <p>Kelleher, B., Estrada, K., <strong>Zeri, H. N.,</strong> Springer-Wheeler, D., Seidl, A., Hamrick, L., Neo, W. S., Harold, R., Galvez, K. O., & Foti, D. (2023, November 3). <em>PANDABox (Parent Administered Neurodevelopmental Assessment) for remote monitoring of high-risk children</em> [Oral presentation]. NIH Remote Neuropsychological Assessments in Research: Present and Future Needs.</p>
@@ -161,7 +221,7 @@
             <a href="https://www.linkedin.com/in/haleyzeri" class="footer-icon" aria-label="LinkedIn">
                 <img src="/footer/linkedin.png" alt="LinkedIn" class="icon">
             </a>
-            <a href="/footer/Haley Zeri CV Website.pdf" download class="footer-icon" aria-label="Download CV">
+            <a href="/footer/Haley Zeri CV Website 4_25.pdf" download class="footer-icon" aria-label="Download CV">
                 <img src="/footer/CV.png" alt="Download CV" class="icon">
             </a>
         </div>
