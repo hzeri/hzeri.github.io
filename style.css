@@ -834,15 +834,15 @@ ul li {
 }
 
 .footer-header h2 {
-    font-size: 1.5rem; /* Adjust font size */
-    color: #724b48; /* Match your theme color */
-    margin-bottom: 5px; /* Space below the heading */
+    font-size: 1.5rem; 
+    color: #724b48; 
+    margin-bottom: 5px; 
 }
 
 .dots-line {
-    font-size: 1.2rem; /* Adjust size of dots */
-    color: #ab97a9; /* Slightly lighter color for dots */
-    letter-spacing: 5px; /* Space out the dots */
+    font-size: 1.2rem; 
+    color: #ab97a9; 
+    letter-spacing: 5px; 
     text-align: center;
 }
 
@@ -850,26 +850,25 @@ ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px; /* Space between icons */
+    gap: 20px; 
 }
 
 .footer-icon .icon {
-    width: 40px; /* Size of the icons */
+    width: 40px; 
     height: 40px;
     object-fit: contain;
     transition: transform 0.2s ease;
 }
 
 .footer-icon .icon:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
-    opacity: 0.8; /* Dim the icon slightly */
+    transform: scale(1.1); 
+    opacity: 0.8; 
 }
 
 .icon {
-    width: 40px; /* Set the width of the icons */
-    height: 40px; /* Set the height of the icons */
-    object-fit: contain; /* Maintain aspect ratio */
-    margin: 5px; /* Add space around the icons */
+    width: 40px;
+    height: 40px;
+    object-fit: contain; 
+    margin: 5px; 
 }
-
 

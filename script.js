@@ -1,3 +1,9 @@
+// === Header === //
+function toggleMenu() {
+  const navLinks = document.querySelector('.navbar-links');
+  navLinks.classList.toggle('active');
+}
+
 document.addEventListener("DOMContentLoaded", function () {
     console.log("JavaScript Loaded!");
   
