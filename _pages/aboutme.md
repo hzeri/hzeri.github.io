@@ -1,4 +1,4 @@
 ---
 permalink: /aboutme
-redirect_to: /contact.html
+redirect_to: /aboutme/index.html
 ---

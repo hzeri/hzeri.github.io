@@ -7,48 +7,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alice&family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
-    <script src="/script.js"></script>
+    <script src="/script.js" defer></script>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico">
 </head>
 
-<header>
-    <!--Navbar-->
+<body>
+    <header>
         <nav class="navbar">
             <a href="/" class="navbar-brand">Haley Zeri</a>
-            <div class="navbar-links">
-              <a href="/experience/">Experience</a>
-              <a href="/research/">Research</a>
-              <a href="/achievements/">Achievements</a>
-              <a href="/aboutme/" class="contact-button">About Me</a>          
+    
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbar-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+    
+            <div class="navbar-links" id="navbar-links">
+                <a href="/index/">Home</a>
+                <a href="/cv/index.html">CV</a>
+                <a href="/research/index.html">Research</a>
+                <a href="/awards/index.html">Awards</a>
+                <a href="/aboutme/index.html" class="nav-active">About Me</a>
             </div>
         </nav>
-</header>
+    </header>
+    <main id="about-page" class="page-shell">
+        <p>Page is under construction!</p>
+    </main>
 
-<body>
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <div class="site-footer-top">
+                <h2>Let's Connect!</h2>
+                <div class="dots-line">• • • • •</div>
+            </div>
+
+            <div class="footer-icons" aria-label="Contact links">
+                <a href="mailto:haley_zeri@rush.edu" class="footer-icon" aria-label="Email">
+                    <img src="/footer/mail.png" alt="Email" class="icon">
+                </a>
     
-<!-- Footer with Contact Information -->
-<footer>
-    <hr class="bottom-line">
-    <div class="footer-container">
-        <div class="footer-header">
-            <h2>Contact Me</h2>
-            <div class="dots-line">• • • • •</div>
+                <a href="/cv/index.html" class="footer-icon" aria-label="CV">
+                    <img src="/footer/cv.png" alt="CV" class="icon">
+                </a>
+    
+                <a href="https://www.linkedin.com/in/haleyzeri" class="footer-icon" aria-label="LinkedIn">
+                    <img src="/footer/LinkedIn_icon.png" alt="LinkedIn" class="icon">
+                </a>
+    
+                <a href="https://orcid.org/0009-0000-5889-1166" class="footer-icon" aria-label="ORCID">
+                    <img src="/footer/ORCID_iD.png" alt="ORCID" class="icon">
+                </a>
+            </div>
+
+            <p class="footer-note">© 2026 Haley Zeri</p>
         </div>
-        <div class="footer-icons">
-            <a href="mailto:haleyzeri@gmail.com" class="footer-icon" aria-label="Email">
-                <img src="/footer/mail.png" alt="Email" class="icon">
-            </a>
-            <a href="https://www.linkedin.com/in/haleyzeri" class="footer-icon" aria-label="LinkedIn">
-                <img src="/footer/linkedin.png" alt="LinkedIn" class="icon">
-            </a>
-            <a href="/footer/Haley Zeri CV Website 4_25.pdf" download class="footer-icon" aria-label="Download CV">
-                <img src="/footer/CV.png" alt="Download CV" class="icon">
-            </a>
-        </div>
-    </div>
-  </footer>  
+    </footer>
 </body>
 </html>

@@ -3,315 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haley Zeri - Home</title>
-    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Haley Zeri</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
-    <script src="/script.js"></script>
+    <script src="/script.js" defer></script>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon/favicon.ico">
 </head>
 
-<header>
-  <!--Navbar-->
-      <nav class="navbar">
-          <a href="/" class="navbar-brand">Haley Zeri</a>
-          <div class="navbar-links">
-            <a href="/experience/">Experience</a>
-            <a href="/research/">Research</a>
-            <a href="/achievements/">Achievements</a>
-            <a href="/aboutme/" class="contact-button">About Me</a>          
-          </div>
-      </nav>
-</header>
-
 <body>
-  <!-- Introduction -->
-  <main id="home-page">
-    <section id="home-container">
-        <div class="photo-column">
-          <a href="/aboutme/" style="text-decoration: none; color: inherit;">
-          <img src="/home_images/Haley Zeri Headshot Pink.png" alt="Haley Zeri" class="profile-photo interactive">
-          </a>
-      </div>
-      <div class="info-column">
-          <h2>Hi, I'm Haley!</h2>
-          <p id="description"><strong>Undergraduate Research Assistant | Direct Support Professional | Psychological Sciences & Spanish @ Purdue University</strong></p>
-          <p>I am an aspiring clinical scientist and clinical psychological who desires to bridge research and practice within autism and developmental disability research to improve quality of life within the community.</p>
-      </div>
-    </section>
-    <!--Research & Clinical Experience-->
-    <section class="exp-over">
-        <section id="research-experience">
-            <h1>Research & Clinical Experience</h1>
-              <p class="section-intro">As a research assistant, I have <b>7 semesters</b> of research experience across <b>3 labs </b> at Purdue University:</p>
-                <div class="home-card-container three-cards">
-                  <div class="home-card">
-                    <a href="/experience/?tab=sleeplab" style="text-decoration: none; color: inherit;">
-                        <img src="/home_images/family.png" alt="Sleep & Developmental Studies Lab" class="home-card-img">
-                        <h3>Sleep & Developmental Studies Lab</h3>
-                        <p>R coding & data visualization in projects focusing on autistic youth.</p>
-                    </a>
-                  </div>   
-                  <div class="home-card">
-                    <a href="/experience/?tab=TREKSlab" style="text-decoration: none; color: inherit;">
-                        <img src="/home_images/social-justice.png" alt="TREKS Research Generator" class="home-card-img">
-                        <h3>TREKS Research Generator</h3>
-                        <p>Pioneering a novel near-peer mentor role in service-learning clubs in K-12 schools.</p>
-                    </a>
-                  </div>                
-                  <div class="home-card">
-                    <a href="/experience/?tab=neurolab" style="text-decoration: none; color: inherit;">
-                      <img src="/home_images/dna.png" alt="Neurodevelopmental Family Lab" class="home-card-img">
-                      <h3>Neurodevelopmental Family Lab</h3>
-                      <p>Project lead conducting telehealth assessments and managing participant retention.</p>
-                    </a>
-                  </div> 
-                  <!-- ========================== TEMPLATE START ========================== -->
-                  <!-- 
-                  <div class="home-card">
-                    <a href="/experience/?tab=newlab" style="text-decoration: none; color: inherit;">
-                      <img src="/home_images/new-icon.png" alt="New Lab" class="home-card-img">
-                      <h3>New Lab Name</h3>
-                      <p>Brief description of responsibilities or focus area.</p>
-                    </a>
-                  </div> 
-                  -->
-                  <!-- ========================== TEMPLATE END ============================ -->
+    <header>
+        <nav class="navbar">
+            <a href="/" class="navbar-brand">Haley Zeri</a>
+    
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navbar-links">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+    
+            <div class="navbar-links" id="navbar-links">
+                <a href="/index/" class="nav-active">Home</a>
+                <a href="/cv/index.html">CV</a>
+                <a href="/research/index.html">Research</a>
+                <a href="/awards/index.html">Awards</a>
+                <a href="/aboutme/index.html">About Me</a>
+            </div>
+        </nav>
+    </header>
+    <main id="home-page" class="page-shell">
+        <section class="home-hero-academic">
+            <div class="home-hero-left">
+                <div class="home-hero-photo">
+                    <img src="/home_images/Haley Zeri Headshot Pink.png" alt="Picture of Me">
                 </div>
-        </section> 
+            </div>
 
-        <p class="section-intro">Additionally, I have clinical experience working with children with developmental disabilites in both community and clinical settings:</p>
-            <section id="clinical-experience">
-                <div class="home-card-container two-cards">
-                  <div class="home-card">
-                    <a href="/experience/?tab=grantshouse" style="text-decoration: none; color: inherit;">
-                    <img src="/home_images/GH_icon.png" alt="GH_icon" class="home-card-img">
-                    <h3>Direct Support Professional @ Grant’s House</h3>
-                    <p>2+ years working with children with developmental disabilities.</p>
-                    </a>
-                  </div>
-                  <div class="home-card">
-                    <a href="/experience/?tab=andy" style="text-decoration: none; color: inherit;">
-                    <img src="/home_images/ANDY_icon.png" alt="ANDY_icon" class="home-card-img">
-                    <h3>Camp Counselor @ Camp ANDY</h3>
-                    <p>200+ hours implementing an evidence-based summer treatment program.</p>
-                  </a>
-                  </div>
-                  <!-- ========================== TEMPLATE START ========================== -->
-                  <!-- 
-                  <div class="home-card">
-                    <a href="/experience/?tab=newclinical" style="text-decoration: none; color: inherit;">
-                      <img src="/home_images/new-icon.png" alt="New Clinical Role" class="home-card-img">
-                      <h3>New Clinical Role</h3>
-                      <p>Short role description including metrics or focus.</p>
-                    </a>
-                  </div> 
-                  -->
-                  <!-- ========================== TEMPLATE END ============================ -->
+            <div class="home-hero-right">
+                <h1 class="home-name">Hi, I'm Haley!</h1>
+            
+                <div class="hero-intro-block">
+                    <p class="hero-role">
+                        Clinical Research Coordinator @ Autism Assessment, Research, Treatment, and Services Center (AARTS), Rush University Medical Center
+                    </p>
+            
+                    <p class="hero-education">
+                        Purdue University Alumna, B.S. Psychological Sciences &amp; B.A. Spanish
+                    </p>
                 </div>
-                <a href="/experience/" style="text-decoration: none; color: #724b48;" class="button">View All My Experience</a>
-            </section>              
-
-    <!--Projects & Publications section-->
-        <section class="exp-over">
-            <section id="projects_pubs">
-                <h1>Projects & Publications</h1>
-                <p class="section-intro">I have experience with study conduct & dissemenation honed across my honors thesis and several presentations:</p>
-                <div class="home-card-container three-cards">
-                  <div class="home-card">
-                    <a href="/research/#indpen-project" style="text-decoration: none; color: inherit;">
-                      <img src="/home_images/Thesis_logo.png" alt="Thesis logo" class="home-card-img">
-                      <h3>Independent honors thesis</h3>
-                      <p>Assessed caregiver perspectives of services for children and adults with developmental disabilites.</p>
-                    </a>
-                  </div>
-                  <div class="home-card">
-                    <a href="/research/#publications" style="text-decoration: none; color: inherit;">
-                      <img src="/home_images/publishing.png" alt="publishing" class="home-card-img">
-                      <h3>Published as first author</h3>
-                      <p>Published in a peer-reviewed indexed journal with another currently under review.</p>
-                    </a>
-                  </div>
-                  <div class="home-card">
-                    <a href="/research/#presentations" style="text-decoration: none; color: inherit;">
-                      <img src="/home_images/presentation.png" alt="presentation" class="home-card-img">
-                      <h3>8 posters & oral presentations</h3>
-                      <p>In regional, national, and international conferences.</p>
-                    </a>
-                  </div>
-                  <!-- ========================== TEMPLATE START ========================== -->
-                  <!-- 
-                  <div class="home-card">
-                    <a href="/research/#newproject" style="text-decoration: none; color: inherit;">
-                      <img src="/home_images/new-icon.png" alt="New Project" class="home-card-img">
-                      <h3>New Project Title</h3>
-                      <p>Short description of research, poster, or publication.</p>
-                    </a>
-                  </div> 
-                  -->
-                  <!-- ========================== TEMPLATE END ============================ -->
-                </div>
-                  <a href="/research/" class="button">View All My Work</a>
-            </section> 
+            
+                <p class="hero-summary">
+                    I am a researcher focused on translational, intervention-focused research for autism, developmental disabilities, and neurogenetic populations, with experience in clinical trials, independent research, and mixed-methods approaches. 
+                </p>
+                <p class="hero-summary">
+                    I have presented first-authored work at national and international conferences and contribute to ongoing manuscripts.
+                </p>
+                <p class="hero-summary">
+                    My clinical experience implementing evidence-based interventions, including PEERS® and the Summer Treatment Program for autistic adolescents, informs my goal of conducting intervention-focused research that can improve adaptive functioning and social outcomes. 
+                </p>
+            
+                <p class="hero-interests">
+                    <strong>Interests:</strong> Autism, developmental disabilities, and neurogenetic syndromes; intervention research and implementation, parent-implemented interventions; adaptive functioning and challenging behaviors.
+                </p>
+            </div>
         </section>
-    <!--Skills section-->
-    <section id="skills-section" class="skills-section">
-      <h1>Skills & Expertise</h1>
-      <p class="section-intro">
-        Across my two majors in Psychological Sciences & Spanish and variety of experiences, I have honed many skills:
-      </p>
-    <div class="filter-buttons">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="Research">Research</button>
-      <button class="filter-btn" data-filter="Clinical">Clinical</button>
-      <button class="filter-btn" data-filter="Communication">Communication</button>
-      <button class="filter-btn" data-filter="Problem Solving">Problem Solving</button>
-      <button class="filter-btn" data-filter="Collaboration">Collaboration</button>
-    </div>
-    <div class="skills-container">
-      <a class="skill-card" data-category="Research,Collaboration">
-        <div class="skill-categories">
-          <span class="skill-category">Research</span>
-          <span class="skill-category">Collaboration</span>
-        </div>
-        <h3>Project Management</h3>
-      </a>
-      <a class="skill-card" data-category="Research,Communication">
-        <div class="skill-categories">
-          <span class="skill-category">Research</span>
-          <span class="skill-category">Communication</span>
-        </div>
-        <h3>Participant Recruitment</h3>
-      </a>
-      <a class="skill-card" data-category="Collaboration,Communication">
-        <div class="skill-categories">
-          <span class="skill-category">Collaboration</span>
-          <span class="skill-category">Communication</span>
-        </div>
-        <h3>Team Work & Collaboration</h3>
-      </a>
-      <a class="skill-card" data-category="Research,Problem Solving">
-        <div class="skill-categories">
-          <span class="skill-category">Research</span>
-          <span class="skill-category">Problem Solving</span>
-        </div>
-        <h3>Data Visualization & Analysis</h3>
-      </a>
-      <a class="skill-card" data-category="Clinical,Research">
-        <div class="skill-categories">
-          <span class="skill-category">Clinical</span>
-          <span class="skill-category">Research</span>
-        </div>
-        <h3>Implementing Evidence-Based Interventions</h3>
-      </a>
-      <a class="skill-card" data-category="Clinical,Problem Solving">
-        <div class="skill-categories">
-          <span class="skill-category">Clinical</span>
-          <span class="skill-category">Problem Solving</span>
-        </div>
-        <h3>Personalized Support & Care</h3>
-      </a>
-      <a class="skill-card" data-category="Research,Problem Solving">
-        <div class="skill-categories">
-          <span class="skill-category">Research</span>
-          <span class="skill-category">Problem Solving</span>
-        </div>
-        <h3>R Coding Language & SPSS</h3>
-      </a>
-      <a class="skill-card" data-category="Research,Communication">
-        <div class="skill-categories">
-          <span class="skill-category">Research</span>
-          <span class="skill-category">Communication</span>
-        </div>
-        <h3>Dissemination of Findings</h3>
-      </a>
-      <a class="skill-card" data-category="Research,Problem Solving">
-        <div class="skill-categories">
-          <span class="skill-category">Research</span>
-          <span class="skill-category">Problem Solving</span>
-        </div>
-        <h3>Novel Study Design</h3>
-      </a>
-      <a class="skill-card" data-category="Clinical,Communication">
-        <div class="skill-categories">
-          <span class="skill-category">Clinical</span>
-          <span class="skill-category">Communication</span>
-        </div>
-        <h3>Setting Intervention Goals</h3>
-      </a>
-      <a class="skill-card" data-category="Clinical,Research">
-        <div class="skill-categories">
-          <span class="skill-category">Clinical</span>
-          <span class="skill-category">Research</span>
-        </div>
-        <h3>Clinical Data Collection</h3>
-      </a>
-      <a class="skill-card" data-category="Clinical,Communication">
-        <div class="skill-categories">
-          <span class="skill-category">Clinical</span>
-          <span class="skill-category">Communication</span>
-        </div>
-        <h3>Inclusive Communication Strategies</h3>
-      </a>
-      <a class="skill-card" data-category="Communication">
-        <div class="skill-categories">
-          <span class="skill-category">Communication</span>
-        </div>
-        <h3>Spanish (Working Proficiency)</h3>
-      </a>
-      <a class="skill-card" data-category="Collaboration,Communication">
-        <div class="skill-categories">
-          <span class="skill-category">Collaboration</span>
-          <span class="skill-category">Communication</span>
-        </div>
-        <h3>Mentorship</h3>
-      </a>
-      <a class="skill-card" data-category="Collaboration,Communication">
-        <div class="skill-categories">
-          <span class="skill-category">Collaboration</span>
-          <span class="skill-category">Communication</span>
-        </div>
-        <h3>Team Leadership & Coordination</h3>
-      </a>
-      <!-- ========================== TEMPLATE START ========================== -->
-                  <!-- 
-                  <a class="skill-card" data-category="Fill with tags">
-                    <div class="skill-categories">
-                      <span class="skill-category">Tag</span>
-                      <span class="skill-category">Tag</span>
-                    </div>
-                    <h3>New Skill</h3>
-                  </a>
-                  -->
-      <!-- ========================== TEMPLATE END ============================ -->
-   </div>
-   <a href="#" id="toggle-skills-btn" class="button">View More Skills</a>
-  </section>
- </main>
 
-  <!-- Footer with Contact Information -->
-    <footer>
-      <hr class="bottom-line">
-      <div class="footer-container">
-          <div class="footer-header">
-              <h2>Contact Me</h2>
-              <div class="dots-line">• • • • •</div>
-          </div>
-          <div class="footer-icons">
-              <a href="mailto:haleyzeri@gmail.com" class="footer-icon" aria-label="Email">
-                  <img src="/footer/mail.png" alt="Email" class="icon">
-              </a>
-              <a href="https://www.linkedin.com/in/haleyzeri" class="footer-icon" aria-label="LinkedIn">
-                  <img src="/footer/linkedin.png" alt="LinkedIn" class="icon">
-              </a>
-              <a href="/footer/Haley Zeri CV Website 4_25.pdf" download class="footer-icon" aria-label="Download CV">
-                  <img src="/footer/CV.png" alt="Download CV" class="icon">
-              </a>
-          </div>
-      </div>
-    </footer> 
-  <script src="/script.js"></script>
+        <section class="home-split-section">
+            <div class="home-split-label">
+                <h2>Experience</h2>
+            </div>
+
+            <div class="home-split-content">
+                <article class="home-highlight">
+                    <h3>Currently a Clinical Research Coordinator for a behavioral RCT</h3>
+                    <p>
+                        Lead coordinator for a behavioral intervention RCT, Web INtervention for Youth with Genetic Syndromes (WINGS), examining the efficacy and implementation of a caregiver-implemented, telehealth-based behavioral intervention tailored for children ages 2-12 with a genetic syndromic and co-occurring intellectual disability. 
+                    </p>
+                </article>
+                <article class="home-highlight">
+                    <h3>Prior research experiences across autism, developmental disability, &amp; community-focused research</h3>
+                    <p>
+                        Several prior research experiences collecting, processing, and disseminating quantitative and qualitative data for projects focused on autism, developmental disability, and neurogenetic syndrome populations.
+                    </p>
+                </article>
+                <article class="home-highlight">
+                    <h3>Clinical experience with children with autism and developmental disabilities</h3>
+                    <p>
+                        Experience implementing social skills and behavioral interventions, such as PEERS and the Summer Treatment Program, for adolescents with autism and other developmental disabilities. 
+                    </p>
+                </article>
+                <div class="home-split-cta">
+                    <a href="/cv/index.html" class="action-button">View CV</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-split-section">
+            <div class="home-split-label">
+                <h2>Research</h2>
+            </div>
+
+            <div class="home-split-content">
+                <article class="home-highlight">
+                    <h3>Current Projects</h3>
+                    <p>
+                        Several projects and manuscripts in development, including meta analyses, a protocol paper, and poster presentations related to autism and/or developmental disabilities.
+                    </p>
+                </article>
+
+                <article class="home-highlight">
+                    <h3>Presentations &amp; Publications</h3>
+                    <p>
+                        Extensive experience disseminating research at national and international conferences and several contributions to manuscripts, including a first-author publication.
+                    </p>
+                </article>
+
+                <article class="home-highlight">
+                    <h3>Independent Honors Thesis</h3>
+                    <p>
+                        Designed and conducted an independent research study assessing caregivers' perspectives of services for their children with developmental disabilities, highlighting an understudied yet widely used Medicaid-funded service, day habilitation. 
+                    </p>
+                </article>
+
+                <div class="home-split-cta">
+                    <a href="/research/index.html" class="action-button">View Research</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <div class="site-footer-top">
+                <h2>Let's Connect!</h2>
+                <div class="dots-line">• • • • •</div>
+            </div>
+    
+            <div class="footer-icons" aria-label="Contact links">
+                <a href="mailto:haley_zeri@rush.edu" class="footer-icon" aria-label="Email">
+                    <img src="/footer/mail.png" alt="Email" class="icon">
+                </a>
+    
+                <a href="/cv/index.html" class="footer-icon" aria-label="CV">
+                    <img src="/footer/cv.png" alt="CV" class="icon">
+                </a>
+    
+                <a href="https://www.linkedin.com/in/haleyzeri" class="footer-icon" aria-label="LinkedIn">
+                    <img src="/footer/LinkedIn_icon.png" alt="LinkedIn" class="icon">
+                </a>
+    
+                <a href="https://orcid.org/0009-0000-5889-1166" class="footer-icon" aria-label="ORCID">
+                    <img src="/footer/ORCID_iD.png" alt="ORCID" class="icon">
+                </a>
+            </div>
+    
+            <p class="footer-note">© 2026 Haley Zeri</p>
+        </div>
+    </footer>
 </body>
 </html>
