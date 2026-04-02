@@ -1,4 +1,4 @@
 ---
 permalink: /cv
-redirect_to: /cv/index.html
+redirect_to: index.html
 ---
