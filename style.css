@@ -1302,18 +1302,6 @@ header {
     padding: 24px 20px 72px;
 }
 
-.about-hero {
-    margin: 42px auto 34px;
-}
-
-.about-subtitle {
-    max-width: 620px;
-    margin: 12px auto 0;
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #8a6f6f;
-}
-
 .about-flow {
     display: flex;
     flex-direction: column;
@@ -1324,14 +1312,6 @@ header {
     max-width: 760px;
     margin: 0 auto;
     width: 100%;
-}
-
-.about-lead {
-    margin: 0;
-    font-size: 1.22rem;
-    line-height: 1.8;
-    color: #5a3e3e;
-    font-weight: 500;
 }
 
 .about-text {
@@ -1347,29 +1327,16 @@ header {
 
 .about-image-break {
     margin: 2px auto;
+    max-width: 620px;
 }
 
 .about-image-break img {
     border-radius: 14px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-}
-
-
-.about-image-break-small {
+    margin: 2px auto;
     max-width: 620px;
+    margin-bottom: 12px;
 }
-.about-ending {
-    margin-top: 8px;
-    padding-top: 24px;
-    border-top: 1px solid #eee2e8;
-}
-
-.about-section-title {
-    margin: 0 0 12px;
-    font-size: 1.45rem;
-    line-height: 1.2;
-}
-
 
 @media (max-width: 768px) {
     #about-page {
@@ -1384,17 +1351,6 @@ header {
         max-width: 100%;
     }
 
-    .about-lead {
-        font-size: 1.12rem;
-    }
-
-    .about-pull-quote p {
-        font-size: 1.25rem;
-    }
-
-    .about-soft-section {
-        padding: 22px 18px;
-    }
 }
 /* =========================================
    Footer
