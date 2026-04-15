@@ -1295,62 +1295,76 @@ header {
 /* =========================================
    About Me  Page
 ========================================= */
+/* =========================================
+   About Me Page
+========================================= */
 
 #about-page {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 24px 20px 72px;
+    padding: 24px 20px 88px;
 }
 
-.about-flow {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-}
-
-.about-reading-width {
+#profpath {
     max-width: 760px;
     margin: 0 auto;
-    width: 100%;
+}
+
+#profpath .section-title {
+    margin-top: 72px;
+    margin-bottom: 22px;
+}
+
+#profpath .section-title:first-of-type {
+    margin-top: 0;
 }
 
 .about-text {
-    margin: 0 0 18px;
+    margin: 0 0 22px;
     font-size: 1rem;
-    line-height: 1.8;
+    line-height: 1.85;
     color: #6b5555;
 }
 
-.about-text:last-child {
+.about-text:last-of-type {
     margin-bottom: 0;
 }
 
 .about-image-break {
-    margin: 2px auto;
+    margin: 36px auto 28px;
     max-width: 620px;
 }
 
 .about-image-break img {
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    margin: 2px auto;
+    display: block;
+    width: 100%;
     max-width: 620px;
-    margin-bottom: 12px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
 }
 
 @media (max-width: 768px) {
     #about-page {
-        padding: 20px 14px 56px;
+        padding: 20px 14px 64px;
     }
 
-    .about-flow {
-        gap: 36px;
-    }
-
-    .about-reading-width {
+    #profpath {
         max-width: 100%;
     }
 
+    #profpath .section-title {
+        margin-top: 56px;
+        margin-bottom: 18px;
+    }
+
+    .about-text {
+        margin-bottom: 18px;
+        line-height: 1.75;
+    }
+
+    .about-image-break {
+        margin: 28px auto 20px;
+    }
 }
 /* =========================================
    Footer
