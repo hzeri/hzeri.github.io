@@ -1108,6 +1108,16 @@ header {
     width: 100%;
 }
 
+#manuscripts-under-review .citation {
+    margin: 0;
+    padding-top: 12px;
+    border-top: 1px dashed #d6bdd3;
+    line-height: 1.7;
+    text-align: left;
+    width: 100%;
+}
+
+
 .thesis-feature {
     background-color: #f8f1f4;
     border: 1px solid #e4dcdc;
